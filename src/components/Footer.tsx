@@ -1,144 +1,100 @@
 import Link from "next/link";
 import { Droplets, Mail, Phone, MapPin } from "lucide-react";
 
-const FacebookIcon = ({ size = 20 }: { size?: number }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-  </svg>
-);
-
-const InstagramIcon = ({ size = 20 }: { size?: number }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-    <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
-  </svg>
-);
-
-const LinkedinIcon = ({ size = 20 }: { size?: number }) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-    <rect width="4" height="12" x="2" y="9" />
-    <circle cx="4" cy="4" r="2" />
-  </svg>
-);
-
 export default function Footer() {
   return (
-    <footer className="bg-slate-50 dark:bg-slate-950 border-t border-slate-200 dark:border-slate-800 pt-16 pb-8">
-      <div className="container mx-auto px-4 md:px-6">
+    <footer className="bg-[#071828] border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
+      {/* Decorative background glow */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-aqua-600/4 rounded-full blur-[100px] pointer-events-none" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="space-y-6">
-            <Link href="/" className="flex items-center gap-2">
-              <div className="w-10 h-10 bg-aqua-600 rounded-xl flex items-center justify-center text-white shadow-lg">
+            <Link href="/" className="flex items-center gap-3">
+              <div className="w-12 h-12 bg-gradient-to-br from-aqua-400 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(14,116,144,0.4)]">
                 <Droplets size={24} />
               </div>
-              <span className="text-xl font-bold tracking-tight text-aqua-900 dark:text-white uppercase">
-                SUDU DUWA AQUA
-              </span>
+              <div className="flex flex-col">
+                <span className="text-xl font-black tracking-tighter uppercase leading-none text-white">
+                  SUDU DUWA
+                </span>
+                <span className="text-[10px] font-black tracking-[0.3em] text-aqua-400 uppercase">
+                  AQUA PRODUCTS
+                </span>
+              </div>
             </Link>
-            <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
-              Leading the way in sustainable aquaculture, providing premium quality aquatic products with a focus on environmental harmony and ethical farming.
+            <p className="text-slate-400 text-sm leading-relaxed font-light">
+              Sri Lanka's premier scientific prawn hatchery. We produce SPF-certified nauplii and highly robust post-larvae (PL) to empower regional aquaculture farmers.
             </p>
-            <div className="flex gap-4">
-              <Link href="#" className="p-2 bg-white dark:bg-slate-900 rounded-lg shadow-sm hover:text-aqua-600 transition-colors">
-                <FacebookIcon size={20} />
-              </Link>
-              <Link href="#" className="p-2 bg-white dark:bg-slate-900 rounded-lg shadow-sm hover:text-aqua-600 transition-colors">
-                <InstagramIcon size={20} />
-              </Link>
-              <Link href="#" className="p-2 bg-white dark:bg-slate-900 rounded-lg shadow-sm hover:text-aqua-600 transition-colors">
-                <LinkedinIcon size={20} />
-              </Link>
-            </div>
           </div>
 
           {/* Links Column */}
           <div>
-            <h4 className="text-aqua-900 dark:text-white font-bold mb-6">Quick Links</h4>
+            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-slate-600 dark:text-slate-400 hover:text-aqua-600 text-sm transition-colors">Home</Link></li>
-              <li><Link href="/about" className="text-slate-600 dark:text-slate-400 hover:text-aqua-600 text-sm transition-colors">About Us</Link></li>
-              <li><Link href="/products" className="text-slate-600 dark:text-slate-400 hover:text-aqua-600 text-sm transition-colors">Our Products</Link></li>
-              <li><Link href="/farming-practices" className="text-slate-600 dark:text-slate-400 hover:text-aqua-600 text-sm transition-colors">Farming Practices</Link></li>
-              <li><Link href="/contact" className="text-slate-600 dark:text-slate-400 hover:text-aqua-600 text-sm transition-colors">Contact Us</Link></li>
+              <li><Link href="/" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Home</Link></li>
+              <li><Link href="/about" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Our Science</Link></li>
+              <li><Link href="/products" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Seed Availability</Link></li>
+              <li><Link href="/farming-practices" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Hatchery Technology</Link></li>
+              <li><Link href="/faq" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Farmer FAQ</Link></li>
             </ul>
           </div>
 
           {/* Contact Column */}
-          <div>
-            <h4 className="text-aqua-900 dark:text-white font-bold mb-6">Contact Info</h4>
-            <ul className="space-y-4">
-              <li className="flex items-start gap-3">
-                <MapPin size={20} className="text-aqua-600 shrink-0" />
-                <span className="text-slate-600 dark:text-slate-400 text-sm">
-                  123 Aqua Valley Road, <br />Colombo, Sri Lanka
-                </span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Phone size={20} className="text-aqua-600 shrink-0" />
-                <span className="text-slate-600 dark:text-slate-400 text-sm">+94 11 234 5678</span>
-              </li>
-              <li className="flex items-center gap-3">
-                <Mail size={20} className="text-aqua-600 shrink-0" />
-                <span className="text-slate-600 dark:text-slate-400 text-sm">info@sududuwaaqua.com</span>
-              </li>
-            </ul>
-          </div>
-
-          {/* Newsletter Column */}
-          <div>
-            <h4 className="text-aqua-900 dark:text-white font-bold mb-6">Inquiry</h4>
-            <p className="text-slate-600 dark:text-slate-400 text-sm mb-4">
-              Have questions about our products or practices?
-            </p>
-            <Link 
-              href="/contact" 
-              className="inline-block bg-aqua-600 hover:bg-aqua-700 text-white px-6 py-3 rounded-xl font-semibold text-sm transition-all shadow-md"
-            >
-              Get in Touch
-            </Link>
+          <div className="lg:col-span-2">
+            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Contact Operations</h4>
+            <div className="grid sm:grid-cols-2 gap-8">
+              <ul className="space-y-5">
+                <li className="flex items-start gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-aqua-400">
+                    <MapPin size={18} />
+                  </div>
+                  <span className="text-slate-400 text-sm leading-relaxed mt-1">
+                    136/52/B/1 Sangathddana<br />Puttalam Road, Chilaw
+                  </span>
+                </li>
+                <li className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-aqua-400">
+                    <Mail size={18} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <a href="mailto:suduaqua726@gmail.com" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors">suduaqua726@gmail.com</a>
+                  </div>
+                </li>
+              </ul>
+              
+              <ul className="space-y-5">
+                <li className="flex items-center gap-4">
+                  <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-aqua-400">
+                    <Phone size={18} />
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <a href="tel:0322055422" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors">0322055422 (Office)</a>
+                    <a href="tel:0706665295" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors">0706665295 (Mobile)</a>
+                  </div>
+                </li>
+                <li>
+                  <Link 
+                    href="/contact" 
+                    className="inline-flex items-center justify-center w-full bg-aqua-600/10 hover:bg-aqua-600/20 text-aqua-400 border border-aqua-600/30 px-6 py-3 rounded-xl font-bold text-sm transition-all mt-2"
+                  >
+                    Direct Technical Support
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="border-t border-slate-200 dark:border-slate-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-slate-500 dark:text-slate-500 text-xs">
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-slate-500 text-xs font-light">
             © {new Date().getFullYear()} SUDU DUWA AQUA PRODUCTS (PVT) LTD. All rights reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="text-slate-500 dark:text-slate-500 hover:text-aqua-600 text-xs transition-colors">Privacy Policy</Link>
-            <Link href="#" className="text-slate-500 dark:text-slate-500 hover:text-aqua-600 text-xs transition-colors">Terms of Service</Link>
+            <span className="text-slate-600 text-xs font-light uppercase tracking-widest">
+              Ambakandawilla | Chilaw
+            </span>
           </div>
         </div>
       </div>

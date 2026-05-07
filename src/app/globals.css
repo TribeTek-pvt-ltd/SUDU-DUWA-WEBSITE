@@ -4,73 +4,259 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   
-  --color-aqua-50: #f0f9ff;
-  --color-aqua-100: #e0f2fe;
-  --color-aqua-200: #bae6fd;
-  --color-aqua-300: #7dd3fc;
-  --color-aqua-400: #38bdf8;
-  --color-aqua-500: #0ea5e9;
-  --color-aqua-600: #0284c7;
-  --color-aqua-700: #0369a1;
-  --color-aqua-800: #075985;
-  --color-aqua-900: #0c4a6e;
-  --color-aqua-950: #082f49;
-  
-  --color-accent-green: #10b981;
+  /* Deep Navy-Teal — professional authority palette */
+  --color-aqua-50:  #f0f9ff;
+  --color-aqua-100: #dbeafe;
+  --color-aqua-200: #bfdbfe;
+  --color-aqua-300: #7bbfce;
+  --color-aqua-400: #3d9db5;
+  --color-aqua-500: #1a7f97;
+  --color-aqua-600: #1a5f7a;
+  --color-aqua-700: #16495f;
+  --color-aqua-800: #113547;
+  --color-aqua-900: #0c2233;
+  --color-aqua-950: #071522;
 
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  /* Dark section background */
+  --color-sky-deep: #0e2a3a;
 
-  --animate-fade-in: fadeIn 0.5s ease-out forwards;
-  --animate-slide-up: slideUp 0.5s ease-out forwards;
-  --animate-float: float 3s ease-in-out infinite;
+  /* Refined champagne-gold — prestige accent */
+  --color-gold-400: #d4a843;
+  --color-gold-500: #b8953a;
+  --color-gold-600: #9a7a2e;
+
+  --color-accent-gold: #d4a843;
+  --color-whatsapp: #25d366;
+
+  /* Fonts */
+  --font-sans:    "Inter",           ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-mono:    "Outfit",          ui-monospace, monospace;
+
+  /* Animations */
+  --animate-fade-in:     fadeIn     0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-slide-up:    slideUp    0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  --animate-float:       float      4s  ease-in-out infinite;
+  --animate-pulse-slow:  pulse      3s  cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  --animate-bounce-slow: bounceSlow 3s  infinite;
+  --animate-shimmer:     shimmer    2s  linear infinite;
+  --animate-ticker:      ticker    30s  linear infinite;
+  --animate-draw:        draw       1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
   @keyframes fadeIn {
-    0% { opacity: 0; }
+    0%   { opacity: 0; }
     100% { opacity: 1; }
   }
   @keyframes slideUp {
-    0% { transform: translateY(20px); opacity: 0; }
-    100% { transform: translateY(0); opacity: 1; }
+    0%   { transform: translateY(40px); opacity: 0; }
+    100% { transform: translateY(0);    opacity: 1; }
   }
   @keyframes float {
     0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
+    50%       { transform: translateY(-14px); }
+  }
+  @keyframes bounceSlow {
+    0%, 100% { transform: translateY(-10%); animation-timing-function: cubic-bezier(0.8, 0, 1, 1); }
+    50%       { transform: translateY(0);   animation-timing-function: cubic-bezier(0, 0, 0.2, 1); }
+  }
+  @keyframes shimmer {
+    0%   { background-position: -200% center; }
+    100% { background-position:  200% center; }
+  }
+  @keyframes ticker {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes draw {
+    0%   { stroke-dashoffset: 1000; }
+    100% { stroke-dashoffset: 0; }
+  }
+  @keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50%       { background-position: 100% 50%; }
+  }
+  @keyframes borderGlow {
+    0%, 100% { box-shadow: 0 0 20px rgba(26, 95, 122, 0.3); }
+    50%       { box-shadow: 0 0 40px rgba(26, 95, 122, 0.5), 0 0 80px rgba(26, 95, 122, 0.15); }
   }
 }
 
+/* ─── CSS Custom Properties ──────────────────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #0a192f;
+  --background:     #ffffff;
+  --foreground:     #0d1f2d;
+  --surface-50:     #f7f9fb;
+  --surface-100:    #eef2f6;
+  --surface-200:    #dde5ed;
+  --gold:           #b8953a;
+  --sky-deep:       #0e2a3a;
+  --teal-signature: #1a5f7a;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #020617;
-    --foreground: #f8fafc;
+    --background:  #ffffff;
+    --foreground:  #0d1f2d;
+    --surface-50:  #f7f9fb;
+    --surface-100: #eef2f6;
+    --surface-200: #dde5ed;
   }
 }
 
+/* ─── Base ───────────────────────────────────────────────────────────────── */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: var(--font-sans);
+  color:        var(--foreground);
+  background:   var(--background);
+  font-family:  var(--font-sans);
+  overflow-x:   hidden;
 }
 
-/* Glassmorphism utility */
-@utility glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+/* ─── Utilities ──────────────────────────────────────────────────────────── */
 
-  @variant dark {
-    background: rgba(15, 23, 42, 0.7);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* Glassmorphism — floating card */
+@utility glass {
+  background:              rgba(255, 255, 255, 0.85);
+  backdrop-filter:         blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border:                  1px solid rgba(255, 255, 255, 0.6);
+  box-shadow:              0 8px 32px -8px rgba(0, 0, 0, 0.08),
+                           inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+/* Standard content card */
+@utility glass-card {
+  background:  #ffffff;
+  border:      1px solid #f1f5f9;
+  box-shadow:  0 10px 30px -10px rgba(0, 0, 0, 0.04);
+  transition:  all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+
+  &:hover {
+    box-shadow:   0 24px 48px -12px rgba(0, 0, 0, 0.1);
+    border-color: var(--color-aqua-200);
+    transform:    translateY(-4px);
   }
 }
 
-/* Smooth transitions */
-* {
-  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+/* Dark glass — for dark section floating cards */
+@utility glass-dark {
+  background:              rgba(15, 23, 42, 0.7);
+  backdrop-filter:         blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border:                  1px solid rgba(255, 255, 255, 0.08);
+  box-shadow:              0 8px 32px -8px rgba(0, 0, 0, 0.4);
+}
+
+/* Section label pill */
+@utility section-label {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             0.5rem;
+  padding:         0.35rem 1rem;
+  border-radius:   9999px;
+  font-size:       0.65rem;
+  font-weight:     700;
+  letter-spacing:  0.18em;
+  text-transform:  uppercase;
+}
+
+/* Trust badge */
+@utility badge-trust {
+  display:         inline-flex;
+  align-items:     center;
+  gap:             0.4rem;
+  padding:         0.3rem 0.8rem;
+  border-radius:   9999px;
+  background:      rgba(26, 95, 122, 0.08);
+  border:          1px solid rgba(26, 95, 122, 0.2);
+  color:           var(--color-aqua-700);
+  font-size:       0.7rem;
+  font-weight:     700;
+  letter-spacing:  0.12em;
+  text-transform:  uppercase;
+}
+
+/* Grain texture overlay */
+@utility grain-overlay {
+  position: relative;
+  &::before {
+    content:          '';
+    position:         absolute;
+    inset:            0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    pointer-events:   none;
+    z-index:          1;
+  }
+}
+
+/* Shimmer button effect */
+@utility btn-shimmer {
+  background-size:   200% auto;
+  animation:         shimmer 3s linear infinite;
+}
+
+/* ─── Gradient text helpers ──────────────────────────────────────────────── */
+.text-gradient {
+  background:                linear-gradient(135deg, var(--color-aqua-600), var(--color-aqua-400));
+  -webkit-background-clip:   text;
+  -webkit-text-fill-color:   transparent;
+  background-clip:           text;
+}
+
+.text-gradient-gold {
+  background:                linear-gradient(135deg, var(--color-gold-600), var(--color-gold-400));
+  -webkit-background-clip:   text;
+  -webkit-text-fill-color:   transparent;
+  background-clip:           text;
+}
+
+.text-gradient-hero {
+  background:                linear-gradient(135deg, #3d9db5, #7bbfce, #a8c5d6);
+  -webkit-background-clip:   text;
+  -webkit-text-fill-color:   transparent;
+  background-clip:           text;
+}
+
+/* ─── Animated shimmer gradient ─────────────────────────────────────────── */
+.shimmer-bg {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255,255,255,0.15) 50%,
+    transparent 100%
+  );
+  background-size:   200% 100%;
+  animation:         shimmer 2s linear infinite;
+}
+
+/* ─── Grid background pattern ───────────────────────────────────────────── */
+.bg-grid {
+  background-image:
+    linear-gradient(rgba(26, 95, 122, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(26, 95, 122, 0.045) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+.bg-grid-dark {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* ─── Smooth global transitions ─────────────────────────────────────────── */
+*, *::before, *::after {
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color     0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              color            0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow       0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Exclude transform from global transition to avoid conflicting with Framer Motion */
+a, button, [role="button"] {
+  transition: background-color 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              border-color     0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              color            0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow       0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform        0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              opacity          0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
