@@ -1,34 +1,34 @@
 import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
-import { Search, Filter } from "lucide-react";
+import { Search, Filter, ShieldCheck, Anchor, ChevronRight, Send, FlaskConical, CheckCircle2 } from "lucide-react";
 
 const products = [
   {
-    name: "High-Survival Nauplii",
+    name: "Litopenaeus Vannamei Nauplii",
     category: "Hatchery Seed",
-    description: "Premium prawn nauplii bred at our Naupillia Center. SPF certified and ready for hatchery rearing.",
-    image: "/premium_sri_lankan_prawns_1777616363350.png"
+    description: "Premium Pacific White Shrimp nauplii bred at our Naupillia Center. SPF certified from USA lineage, ready for hatchery rearing.",
+    image: "/assets/WhatsApp Image 2026-04-20 at 10.16.54.jpeg"
   },
   {
-    name: "Post-Larvae (PL) Seeds",
+    name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
-    description: "Robust post-larvae reared at St. Rogus Hatchery. Acclimated to local salinity levels for optimal farm survival.",
-    image: "/sri_lankan_aquaculture_hero_1777616340247.png"
+    description: "Robust post-larvae reared at St. Rogus Hatchery. Acclimated to local salinity levels for optimal farm survival and high-density yields.",
+    image: "/assets/WhatsApp Image 2026-04-20 at 10.16.19.jpeg"
   },
   {
     name: "Farm Consultation",
     category: "Expert Services",
-    description: "Direct technical guidance from MD Selvarajah Pradeeban on pond preparation and water quality management.",
+    description: "Direct technical guidance from MD Selvarajah Pradeeban on pond preparation, biofloc technology, and water quality management.",
   },
   {
     name: "Water Quality Testing",
     category: "Laboratory Services",
-    description: "Scientific analysis of farm water parameters (pH, salinity, dissolved oxygen) to ensure a safe environment for PL stocking.",
+    description: "Scientific analysis of farm water parameters (pH, salinity, dissolved oxygen, ammonia) to ensure a safe environment for PL stocking.",
   },
   {
     name: "Pathogen Screening",
     category: "Biosecurity",
-    description: "PCR testing and pathogen screening services to maintain strict biosecurity protocols on your commercial farm.",
+    description: "PCR testing and pathogen screening services to maintain strict biosecurity protocols on your commercial shrimp farm.",
   },
   {
     name: "Custom Breeding Programs",
@@ -39,39 +39,71 @@ const products = [
 
 export default function ProductsPage() {
   return (
-    <div className="flex flex-col gap-16 pb-24 bg-white">
+    <div className="flex flex-col gap-0 pb-0 bg-white">
       <Hero 
-        title="Premium Prawn Seeds & Services"
-        subtitle="Explore our availability of high-yield nauplii, robust post-larvae, and expert aquaculture services designed to maximize your farm's success."
+        title="Vannamei Seeds & Services"
+        subtitle="Explore our availability of high-yield SPF nauplii, robust post-larvae, and expert aquaculture services designed to maximize your commercial farm's success."
       />
 
-      <section className="container mx-auto px-4 md:px-6">
+      <section className="container mx-auto px-4 md:px-6 py-20">
+        
+        {/* Quick Highlights */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+           <div className="bg-slate-50 border border-slate-200 p-6 rounded-3xl flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center shrink-0">
+                <ShieldCheck size={24} />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900">SPF Certified</h4>
+                <p className="text-sm text-slate-500">Disease-free lineage</p>
+              </div>
+           </div>
+           <div className="bg-slate-50 border border-slate-200 p-6 rounded-3xl flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-aqua-100 text-aqua-600 flex items-center justify-center shrink-0">
+                <Anchor size={24} />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900">USA Broodstock</h4>
+                <p className="text-sm text-slate-500">Premium genetics</p>
+              </div>
+           </div>
+           <div className="bg-slate-50 border border-slate-200 p-6 rounded-3xl flex items-center gap-4">
+              <div className="w-12 h-12 rounded-full bg-slate-200 text-slate-700 flex items-center justify-center shrink-0">
+                <FlaskConical size={24} />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900">Lab Tested</h4>
+                <p className="text-sm text-slate-500">Rigorous quality control</p>
+              </div>
+           </div>
+        </div>
+
         {/* Filters bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 p-6 bg-slate-50 rounded-[30px] border border-slate-200 shadow-sm">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6 mb-12 p-4 md:p-6 bg-white rounded-[30px] border border-slate-200 shadow-lg shadow-slate-200/50">
           <div className="relative w-full md:w-96">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" size={20} />
             <input 
               type="text" 
               placeholder="Search products & services..." 
-              className="w-full pl-12 pr-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm focus:ring-2 focus:ring-aqua-500 transition-all outline-none text-slate-900"
+              className="w-full pl-12 pr-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm focus:ring-2 focus:ring-aqua-500 transition-all outline-none text-slate-900"
             />
           </div>
           <div className="flex items-center gap-4 w-full md:w-auto">
-            <div className="flex items-center gap-2 px-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm font-bold text-slate-700 cursor-pointer hover:bg-slate-50 transition-colors">
+            <div className="hidden md:flex items-center gap-2 px-4 py-3 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-bold text-slate-700 cursor-pointer hover:bg-slate-100 transition-colors">
               <Filter size={18} />
               Filter By
             </div>
-            <select className="flex-grow md:w-48 px-4 py-3 bg-white border border-slate-200 rounded-2xl text-sm font-bold text-slate-700 focus:ring-2 focus:ring-aqua-500 transition-all outline-none appearance-none cursor-pointer">
+            <select className="flex-grow md:w-56 px-4 py-3.5 bg-slate-50 border border-slate-200 rounded-2xl text-sm font-bold text-slate-700 focus:ring-2 focus:ring-aqua-500 transition-all outline-none appearance-none cursor-pointer">
               <option>All Categories</option>
               <option>Hatchery Seed</option>
               <option>Farm Stocking</option>
               <option>Expert Services</option>
-              <option>Laboratory Services</option>
+              <option>Biosecurity</option>
             </select>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mb-24">
           {products.map((product, i) => (
             <ProductCard key={i} {...product} />
           ))}
@@ -79,40 +111,72 @@ export default function ProductsPage() {
         
       </section>
       
-      {/* Inquiry CTA */}
-      <section className="container mx-auto px-4 md:px-6">
-        <div className="bg-slate-50 rounded-[40px] p-12 text-center border border-slate-200 shadow-sm">
-          <h3 className="text-3xl font-bold text-slate-900 mb-6">Checking Seed Availability?</h3>
-          <p className="text-slate-500 max-w-2xl mx-auto mb-10 text-lg leading-relaxed">
-            Due to the scientific nature of our breeding cycles, Nauplii and PL availability fluctuates. Contact our team in Chilaw to check current stock and place your reservations.
-          </p>
-          <a 
-            href="/contact" 
-            className="inline-block bg-slate-900 hover:bg-aqua-600 text-white px-10 py-4 rounded-2xl font-bold shadow-lg shadow-slate-900/10 transition-all hover:-translate-y-1"
-          >
-            Contact Hatchery
-          </a>
-        </div>
-      </section>
-
-      {/* Product FAQ Section for AEO */}
-      <section className="container mx-auto px-4 md:px-6 pb-20">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-slate-900 mb-10">
-            Frequently Asked Questions about <span className="text-aqua-600">Our Seeds</span>
-          </h2>
-          <div className="grid gap-6">
-            <div className="bg-white p-8 rounded-[30px] border border-slate-200 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Are your post-larvae Specific Pathogen Free (SPF)?</h3>
-              <p className="text-slate-500 leading-relaxed">Yes, all our nauplii and post-larvae are bred under strict biosecurity protocols and are certified SPF to ensure they are free from major viral diseases before stocking.</p>
+      {/* Lead Generation Section - Reserve Batch */}
+      <section className="bg-[#05111c] py-24 relative overflow-hidden">
+        <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-aqua-600/10 rounded-full blur-[100px] -translate-y-1/2 pointer-events-none" />
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 text-aqua-400 font-bold tracking-[0.2em] text-[10px] mb-8 uppercase backdrop-blur-sm">
+                Reserve Your Batch
+              </div>
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+                Check Seed <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-400 to-blue-400">Availability</span>
+              </h2>
+              <p className="text-slate-300 text-lg leading-relaxed font-light mb-8 max-w-lg">
+                Due to the precise scientific nature of our breeding cycles, SPF Litopenaeus Vannamei Nauplii and PL availability fluctuates. Reserve your batch early to secure high-quality stock for your next farm cycle.
+              </p>
+              
+              <ul className="space-y-4 mb-10">
+                <li className="flex items-center gap-3 text-slate-300 font-light">
+                  <CheckCircle2 size={20} className="text-aqua-400" /> Guaranteed SPF USA Lineage
+                </li>
+                <li className="flex items-center gap-3 text-slate-300 font-light">
+                  <CheckCircle2 size={20} className="text-aqua-400" /> Acclimated to target salinity
+                </li>
+                <li className="flex items-center gap-3 text-slate-300 font-light">
+                  <CheckCircle2 size={20} className="text-aqua-400" /> PCR tested before delivery
+                </li>
+              </ul>
+              
             </div>
-            <div className="bg-white p-8 rounded-[30px] border border-slate-200 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">How do I transport the PL to my farm?</h3>
-              <p className="text-slate-500 leading-relaxed">We package our PL in specialized oxygenated transport bags within insulated boxes to maintain optimal temperature and water quality during transit from Chilaw to your location.</p>
-            </div>
-            <div className="bg-white p-8 rounded-[30px] border border-slate-200 shadow-sm">
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Do you provide guidance on pond preparation?</h3>
-              <p className="text-slate-500 leading-relaxed">Absolutely. Our MD, Selvarajah Pradeeban, and our technical team provide expert consultation on water quality, plankton blooms, and salinity adjustments to prepare your pond for optimal PL survival.</p>
+            
+            <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-12 rounded-[40px] shadow-2xl">
+               <h3 className="text-2xl font-bold text-white mb-2">Request Quote & Availability</h3>
+               <p className="text-slate-400 text-sm mb-8 font-light">Fill out the form below or message us on WhatsApp for faster response.</p>
+               
+               <form className="space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Full Name</label>
+                      <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Farm Name</label>
+                      <input type="text" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all" />
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Phone / WhatsApp</label>
+                      <input type="tel" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all" />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Seed Type</label>
+                      <select className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all appearance-none cursor-pointer">
+                        <option className="bg-[#05111c]">Post-Larvae (PL)</option>
+                        <option className="bg-[#05111c]">Nauplii</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Estimated Quantity & Date Required</label>
+                    <textarea rows={3} className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all resize-none"></textarea>
+                  </div>
+                  <button type="submit" className="w-full bg-gradient-to-r from-aqua-500 to-blue-500 hover:from-aqua-400 hover:to-blue-400 text-white font-bold py-5 rounded-xl shadow-lg transition-all transform hover:-translate-y-0.5 flex items-center justify-center gap-2 text-lg">
+                    Submit Inquiry <Send size={18} className="ml-1" />
+                  </button>
+               </form>
             </div>
           </div>
         </div>

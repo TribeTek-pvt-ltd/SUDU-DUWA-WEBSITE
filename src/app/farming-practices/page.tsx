@@ -4,7 +4,7 @@ import { CheckCircle2, ShieldCheck, Droplets, FlaskConical, Microscope, Anchor }
 const steps = [
   {
     title: "Broodstock Selection",
-    description: "We carefully select high-quality, SPF-certified broodstock to ensure strong genetics and fast growth rates in our post-larvae.",
+    description: "We carefully select high-quality, SPF-certified USA lineage broodstock to ensure strong genetics and fast growth rates in our post-larvae.",
     icon: <Anchor size={32} />,
   },
   {
@@ -29,7 +29,7 @@ export default function HatcheryTechnologyPage() {
     <div className="flex flex-col gap-24 pb-24 bg-white">
       <Hero 
         title="Hatchery Technology"
-        subtitle="Where science meets aquaculture. Our state-of-the-art hatcheries in Ambakandawilla produce Sri Lanka's most resilient prawn seeds."
+        subtitle="Where science meets aquaculture. Our state-of-the-art hatcheries in Ambakandawilla produce Sri Lanka's most resilient Litopenaeus Vannamei seeds."
       />
 
       {/* Main Philosophy */}
@@ -57,7 +57,7 @@ export default function HatcheryTechnologyPage() {
             </ul>
           </div>
           <div className="flex-1 w-full aspect-square bg-slate-50 rounded-[60px] overflow-hidden relative border border-slate-100 shadow-sm">
-             <div className="absolute inset-0 bg-[url('/hatchery_facility.png')] bg-cover bg-center opacity-80 mix-blend-multiply" />
+             <div className="absolute inset-0 bg-[url('/assets/WhatsApp%20Image%202026-04-20%20at%2010.16.18.jpeg')] bg-cover bg-center opacity-80 mix-blend-multiply" />
              <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl border border-white">
                   <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-white shadow-xl">
@@ -102,7 +102,7 @@ export default function HatcheryTechnologyPage() {
             <div className="space-y-8">
               <h2 className="text-4xl font-bold text-slate-900 leading-tight">Laboratory & <br />Water Systems</h2>
               <p className="text-slate-500 text-lg leading-relaxed">
-                Our hatcheries are equipped with cutting-edge laboratories to test water quality continuously. By maintaining perfect equilibrium in our tanks, we minimize stress on the prawn seeds, ensuring they acclimate quickly once stocked in your ponds.
+                Our hatcheries are equipped with cutting-edge laboratories to test water quality continuously. By maintaining perfect equilibrium in our tanks, we minimize stress on the Litopenaeus Vannamei seeds, ensuring they acclimate quickly once stocked in your ponds.
               </p>
               <div className="grid grid-cols-2 gap-6">
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">

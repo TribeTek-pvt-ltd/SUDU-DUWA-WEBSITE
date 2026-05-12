@@ -12,7 +12,7 @@ export default function AboutPage() {
              <div className="absolute inset-0 bg-gradient-to-r from-[#071828] via-[#071828]/80 to-transparent z-10" />
              <div className="absolute inset-0 bg-gradient-to-t from-[#071828] via-transparent to-transparent z-10" />
              <img 
-               src="/aquaculture_lab.png" 
+               src="/assets/WhatsApp Image 2026-04-20 at 10.16.52.jpeg" 
                alt="Hatchery Science" 
                className="w-full h-full object-cover"
              />
@@ -24,7 +24,7 @@ export default function AboutPage() {
               Our Science & <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-400 to-blue-500">Mission</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-400 leading-relaxed font-light">
-              SUDU DUWA AQUA PRODUCTS is built on a foundation of rigorous scientific protocols, specialized breeding, and a commitment to advancing Sri Lanka's aquaculture industry.
+              SUDU DUWA AQUA PRODUCTS is built on a foundation of rigorous scientific protocols, specialized breeding from USA imported broodstock, and a commitment to advancing Sri Lanka's Litopenaeus Vannamei aquaculture industry.
             </p>
           </div>
         </div>
@@ -40,7 +40,7 @@ export default function AboutPage() {
               </div>
               <h2 className="text-3xl font-bold text-slate-900 mb-6">Our Vision</h2>
               <p className="text-slate-600 leading-relaxed text-lg font-light">
-                To be the most technologically advanced and scientifically reliable prawn hatchery in Sri Lanka, producing the highest quality SPF (Specific Pathogen Free) seeds that guarantee robust yields for commercial farmers.
+                To be the most technologically advanced and scientifically reliable Pacific White Shrimp hatchery in Sri Lanka, producing the highest quality SPF (Specific Pathogen Free) Litopenaeus Vannamei seeds that guarantee robust yields for commercial farmers.
               </p>
             </div>
             <div className="bg-[#071828] p-12 rounded-[40px] shadow-xl relative overflow-hidden border border-white/5">
@@ -51,7 +51,7 @@ export default function AboutPage() {
                 </div>
                 <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-slate-300 leading-relaxed text-lg font-light">
-                  To utilize cutting-edge food science and aquaculture technology to breed superior nauplii and post-larvae (PL). We aim to empower local farmers with the healthiest seeds, driving the success of the regional aquaculture economy.
+                  To utilize cutting-edge food science and aquaculture technology to breed superior USA-lineage Litopenaeus Vannamei nauplii and post-larvae (PL). We aim to empower local farmers with the healthiest seeds, driving the success of the regional aquaculture economy.
                 </p>
               </div>
             </div>
@@ -83,7 +83,7 @@ export default function AboutPage() {
                     <h4 className="font-bold text-slate-900 mb-2">Naupillia Center</h4>
                     <p className="text-sm text-slate-500 mb-4">No. 08, Ambakandawilla, Chilaw</p>
                     <p className="text-sm text-slate-600 leading-relaxed font-light">
-                      A specialized facility dedicated to the scientific breeding and initial rearing of highly robust prawn nauplii.
+                      A specialized facility dedicated to the scientific breeding and initial rearing of highly robust, USA lineage Litopenaeus Vannamei nauplii.
                     </p>
                   </div>
                   <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200">
@@ -99,7 +99,7 @@ export default function AboutPage() {
 
             <div className="flex-1 w-full relative">
               <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white group">
-                <img src="/hatchery_facility.png" alt="Scientific Aquaculture Facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img src="/assets/WhatsApp Image 2026-04-20 at 10.16.17.jpeg" alt="Scientific Aquaculture Facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-aqua-50 rounded-3xl -z-10 hidden sm:block" />
             </div>
@@ -158,7 +158,7 @@ export default function AboutPage() {
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-4">Strict Biosecurity</h4>
               <p className="text-slate-500 text-sm leading-relaxed font-light">
-                Our hatcheries enforce strict quarantine protocols, ensuring a contamination-free environment that yields resilient, fast-growing prawn seeds.
+                Our hatcheries enforce strict quarantine protocols, ensuring a contamination-free environment that yields resilient, fast-growing Litopenaeus Vannamei seeds.
               </p>
             </div>
             <div className="bg-white p-10 rounded-[30px] border border-slate-200 shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">

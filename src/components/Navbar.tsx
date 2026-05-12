@@ -161,7 +161,7 @@ export default function Navbar() {
                   }}
                 >
                   <span className="relative z-10 flex items-center gap-2">
-                    Get a Quote <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
+                    Check Availability <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                   {/* Glow on hover */}
                   <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
@@ -265,7 +265,7 @@ export default function Navbar() {
                   href="/contact"
                   className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-aqua-600 to-aqua-700 text-white px-6 py-4 rounded-2xl font-black text-sm uppercase tracking-widest shadow-lg shadow-aqua-900/50 hover:from-aqua-500 hover:to-aqua-600 transition-all"
                 >
-                  Get a Quote <ArrowRight size={16} />
+                  Check Availability <ArrowRight size={16} />
                 </Link>
                 <a
                   href="https://wa.me/94706665295"
