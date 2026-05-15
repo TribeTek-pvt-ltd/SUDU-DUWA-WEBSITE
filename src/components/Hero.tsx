@@ -38,23 +38,23 @@ export default function Hero({ title, subtitle, ctaText, ctaLink, image }: HeroP
         )}
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         <motion.div
-          initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          className="max-w-3xl"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+          className="max-w-3xl text-center lg:text-left mx-auto lg:mx-0"
         >
-          <div className="flex items-center gap-4 mb-8">
+          <div className="flex items-center justify-center lg:justify-start gap-4 mb-6 sm:mb-8">
             <div className="flex items-center justify-center w-8 h-8 rounded-full bg-aqua-600/20 text-aqua-400">
               <Droplets size={14} />
             </div>
-            <span className="text-[11px] font-bold tracking-[0.25em] uppercase text-aqua-400">
+            <span className="text-[10px] sm:text-[11px] font-bold tracking-[0.25em] uppercase text-aqua-400">
               Sudu Duwa Aqua Products
             </span>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tighter text-white mb-8 leading-[1.1]">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tighter text-white mb-6 sm:mb-8 leading-[1.1]">
             {title.split(" ").map((word, i) => {
               // Highlight specific words
               const highlightWords = ["hatchery", "seeds", "science", "mission", "technology", "quality"];
@@ -65,7 +65,7 @@ export default function Hero({ title, subtitle, ctaText, ctaLink, image }: HeroP
                 return (
                   <span key={i} className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-400 to-blue-500 relative inline-block">
                     {word}{" "}
-                    <svg className="absolute w-full h-3 -bottom-1 left-0 text-aqua-500/30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                    <svg className="absolute w-full h-2 sm:h-3 -bottom-1 left-0 text-aqua-500/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                       <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="4" fill="none" />
                     </svg>
                   </span>
@@ -75,12 +75,12 @@ export default function Hero({ title, subtitle, ctaText, ctaLink, image }: HeroP
             })}
           </h1>
           
-          <p className="text-lg md:text-xl text-slate-400 mb-12 max-w-xl leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-10 sm:mb-12 max-w-xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed font-light">
             {subtitle}
           </p>
           
           {ctaText && ctaLink && (
-            <div className="flex flex-col sm:flex-row items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 sm:gap-6">
               <Link 
                 href={ctaLink}
                 className="group flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-slate-900 px-8 py-4 rounded-full font-bold transition-all w-full sm:w-auto hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"

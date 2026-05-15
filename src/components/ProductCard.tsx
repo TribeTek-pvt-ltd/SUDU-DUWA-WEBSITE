@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-import { ArrowUpRight, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 
 interface ProductCardProps {
   name: string;
@@ -13,8 +12,8 @@ interface ProductCardProps {
 
 const categoryColors: Record<string, string> = {
   "Hatchery Production": "bg-aqua-600/90 text-white",
-  "Prawn Seeds":         "bg-gold-500/90 text-slate-900",
-  "Aquaculture Services":"bg-slate-800/90 text-white",
+  "Prawn Seeds": "bg-gold-500/90 text-slate-900",
+  "Aquaculture Services": "bg-slate-800/90 text-white",
 };
 
 export default function ProductCard({ name, category, description, image }: ProductCardProps) {
@@ -24,9 +23,10 @@ export default function ProductCard({ name, category, description, image }: Prod
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileHover="hover"
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
-      className="group relative rounded-[28px] overflow-hidden bg-white border border-slate-100 shadow-md hover:shadow-2xl hover:shadow-aqua-600/10 hover:-translate-y-2 transition-all duration-500"
+      transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+      className="group relative rounded-[28px] overflow-hidden bg-white border border-slate-100 shadow-md hover:shadow-xl transition-shadow duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
     >
       {/* Image */}
       <div className="aspect-[4/3] relative overflow-hidden bg-gradient-to-br from-aqua-100 to-slate-100">
@@ -34,7 +34,7 @@ export default function ProductCard({ name, category, description, image }: Prod
           <img
             src={image}
             alt={name}
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+            className="w-full h-full object-cover transition-transform duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]"
           />
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-aqua-50 to-blue-50">
@@ -45,20 +45,7 @@ export default function ProductCard({ name, category, description, image }: Prod
             </div>
           </div>
         )}
-
-        {/* Hover overlay with CTA */}
-        <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-400 flex items-end p-6">
-          <a
-            href="https://wa.me/94706665295"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-full flex items-center justify-center gap-2 bg-[#25d366] hover:bg-[#22c55e] text-white font-bold text-sm py-3 rounded-xl shadow-lg translate-y-4 group-hover:translate-y-0 transition-transform duration-400"
-          >
-            <MessageCircle size={16} />
-            Inquire via WhatsApp
-          </a>
-        </div>
-
+        
         {/* Category badge */}
         <div className="absolute top-4 left-4 z-20">
           <span className={`px-3 py-1.5 text-[9px] font-black tracking-widest uppercase rounded-lg backdrop-blur-sm shadow-sm ${badgeClass}`}>
@@ -69,21 +56,40 @@ export default function ProductCard({ name, category, description, image }: Prod
 
       {/* Content */}
       <div className="p-6">
-        <div className="flex justify-between items-start gap-3 mb-3">
-          <h3 className="text-lg font-bold text-slate-900 group-hover:text-aqua-600 transition-colors leading-snug">
-            {name}
-          </h3>
-          <div className="shrink-0 w-9 h-9 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center text-slate-400 group-hover:bg-aqua-600 group-hover:border-aqua-600 group-hover:text-white transition-all duration-300">
-            <ArrowUpRight size={17} />
+        <div className="flex justify-between items-start gap-4 mb-3">
+          <div className="flex-1">
+            <h3 className="text-lg font-bold text-slate-900 group-hover:text-aqua-600 transition-colors duration-500 leading-snug">
+              {name}
+            </h3>
           </div>
+          <a 
+            href="https://wa.me/94706665295"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="shrink-0 w-11 h-11 rounded-2xl bg-white border border-slate-100 flex items-center justify-center text-[#25d366] hover:bg-[#25d366] hover:text-white transition-all duration-500 shadow-sm hover:shadow-xl hover:shadow-[#25d366]/20 relative z-30"
+            title="Inquire via WhatsApp"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <MessageCircle size={22} fill="currentColor" fillOpacity={0.1} className="group-hover:fill-white" />
+          </a>
         </div>
         <p className="text-slate-500 text-sm leading-relaxed line-clamp-2 font-light">
           {description}
         </p>
       </div>
 
-      {/* Bottom accent line */}
-      <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-gradient-to-r from-aqua-500 to-blue-500 scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500" />
+      {/* Bottom accent line - Progressive liquid growth */}
+      <motion.div 
+        className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-aqua-500 via-blue-500 to-aqua-400"
+        initial={{ width: 0 }}
+        variants={{
+          hover: { width: "100%" }
+        }}
+        transition={{ 
+          duration: 1.2, 
+          ease: [0.22, 1, 0.36, 1]
+        }}
+      />
     </motion.div>
   );
 }

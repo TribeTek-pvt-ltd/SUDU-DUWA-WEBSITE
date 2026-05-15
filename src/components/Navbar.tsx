@@ -7,12 +7,12 @@ import { motion, AnimatePresence } from "framer-motion";
 import { X, ChevronRight, Phone, ArrowRight } from "lucide-react";
 
 const navLinks = [
-  { name: "Home",              href: "/" },
-  { name: "About",             href: "/about" },
-  { name: "Products",          href: "/products" },
-  { name: "Hatchery Tech",     href: "/farming-practices" },
-  { name: "FAQ",               href: "/faq" },
-  { name: "Contact",           href: "/contact" },
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Products", href: "/products" },
+  { name: "Hatchery Tech", href: "/farming-practices" },
+  // { name: "FAQ", href: "/faq" },
+  // { name: "Contact", href: "/contact" },
 ];
 
 /* ─── SD Monogram Logo ──────────────────────────────────────────────────── */
@@ -20,31 +20,28 @@ function LogoBadge({ scrolled }: { scrolled: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-3 group" aria-label="Sudu Duwa Aqua Products Home">
       {/* Monogram badge */}
-      <div
-        className={`relative w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden transition-all duration-500 group-hover:scale-105 ${
-          scrolled
+      {/* <div
+        className={`relative w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden transition-all duration-500 group-hover:scale-105 ${scrolled
             ? "bg-gradient-to-br from-aqua-600 to-sky-deep text-white shadow-aqua-600/20"
             : "bg-white/10 border border-white/25 text-white backdrop-blur-md"
-        }`}
+          }`}
       >
         <span className="font-display font-black text-base leading-none tracking-tighter select-none">SD</span>
-        {/* Subtle shimmer sweep */}
-        <span className="absolute inset-0 shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-      </div>
+        Subtle shimmer sweep
+      <span className="absolute inset-0 shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    </div> */}
 
       <div className="flex flex-col leading-none">
-        <span className={`text-lg font-black tracking-tighter uppercase leading-none transition-colors ${
-          scrolled ? "text-slate-900" : "text-white"
-        }`}>
+        <span className={`text-base sm:text-lg font-black tracking-tighter uppercase leading-none transition-colors ${scrolled ? "text-slate-900" : "text-white"
+          }`}>
           SUDU DUWA
         </span>
-        <span className={`text-[9px] font-black tracking-[0.28em] uppercase transition-colors ${
-          scrolled ? "text-aqua-600" : "text-aqua-300"
-        }`}>
+        <span className={`text-[8px] sm:text-[9px] font-black tracking-[0.2em] sm:tracking-[0.28em] uppercase transition-colors ${scrolled ? "text-aqua-600" : "text-aqua-300"
+          }`}>
           AQUA PRODUCTS
         </span>
       </div>
-    </Link>
+    </Link >
   );
 }
 
@@ -58,8 +55,8 @@ function AnnouncementBar() {
     <div className="relative text-white text-center py-2.5 px-4 text-xs font-semibold tracking-wide overflow-hidden" style={{ background: 'linear-gradient(90deg, #071522, #0e2a3a, #071522)' }}>
       {/* Shimmer sweep */}
       <span className="absolute inset-0 shimmer-bg opacity-30 pointer-events-none" />
-      <span className="relative z-10 flex items-center justify-center gap-3">
-        <span className="text-aqua-300">🦐</span>
+      <span className="relative z-10 flex flex-wrap items-center justify-center gap-1.5 sm:gap-3 text-center">
+        <span className="text-aqua-300 hidden xs:inline">🦐</span>
         <span className="text-slate-200">Seed Season Open —</span>
         <a
           href="https://wa.me/94706665295"
@@ -67,7 +64,7 @@ function AnnouncementBar() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 text-aqua-300 hover:text-white font-bold underline underline-offset-2 transition-colors"
         >
-          WhatsApp us for current availability
+          WhatsApp for availability
           <ArrowRight size={11} />
         </a>
       </span>
@@ -84,9 +81,9 @@ function AnnouncementBar() {
 
 /* ─── Navbar ────────────────────────────────────────────────────────────── */
 export default function Navbar() {
-  const [isOpen, setIsOpen]     = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname                = usePathname();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 30);
@@ -104,13 +101,12 @@ export default function Navbar() {
         <AnnouncementBar />
 
         <nav
-          className={`transition-all duration-500 ${
-            scrolled
-              ? "bg-white/95 backdrop-blur-2xl py-3.5 shadow-[0_4px_30px_rgba(0,0,0,0.07)] border-b border-slate-100"
-              : "bg-transparent py-6"
-          }`}
+          className={`transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${scrolled
+            ? "bg-white/95 backdrop-blur-2xl py-3.5 shadow-[0_4px_30px_rgba(0,0,0,0.07)] border-b border-slate-100"
+            : "bg-transparent py-6"
+            }`}
         >
-          <div className="container mx-auto px-4 md:px-6">
+          <div className="container mx-auto px-4 sm:px-6">
             <div className="flex items-center justify-between">
               <LogoBadge scrolled={scrolled} />
 
@@ -122,18 +118,16 @@ export default function Navbar() {
                     <Link
                       key={link.name}
                       href={link.href}
-                      className={`text-[11px] font-bold tracking-[0.18em] uppercase transition-all relative group ${
-                        scrolled
-                          ? isActive ? "text-aqua-600" : "text-slate-500 hover:text-slate-900"
-                          : isActive ? "text-aqua-300" : "text-white/75 hover:text-white"
-                      }`}
+                      className={`text-[11px] font-bold tracking-[0.18em] uppercase transition-all relative group ${scrolled
+                        ? isActive ? "text-aqua-600" : "text-slate-500 hover:text-slate-900"
+                        : isActive ? "text-aqua-300" : "text-white/75 hover:text-white"
+                        }`}
                     >
                       {link.name}
                       {/* Active / hover underline */}
                       <span
-                        className={`absolute -bottom-1.5 left-0 h-0.5 rounded-full transform origin-left transition-transform duration-300 ${
-                          isActive ? "scale-x-100 w-full" : "scale-x-0 group-hover:scale-x-100 w-full"
-                        } ${scrolled ? "bg-aqua-600" : "bg-aqua-400"}`}
+                        className={`absolute -bottom-1.5 left-0 h-0.5 rounded-full transform origin-left transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${isActive ? "scale-x-100 w-full" : "scale-x-0 group-hover:scale-x-100 w-full"
+                          } ${scrolled ? "bg-aqua-600" : "bg-aqua-400"}`}
                       />
                     </Link>
                   );
@@ -142,9 +136,8 @@ export default function Navbar() {
                 {/* Phone quick-dial */}
                 <a
                   href="tel:0322055422"
-                  className={`hidden xl:flex items-center gap-2 text-[11px] font-bold tracking-wide transition-colors ${
-                    scrolled ? "text-slate-500 hover:text-slate-900" : "text-white/60 hover:text-white"
-                  }`}
+                  className={`hidden xl:flex items-center gap-2 text-[11px] font-bold tracking-wide transition-colors ${scrolled ? "text-slate-500 hover:text-slate-900" : "text-white/60 hover:text-white"
+                    }`}
                 >
                   <Phone size={13} />
                   032 205 5422
@@ -164,7 +157,7 @@ export default function Navbar() {
                     Check Availability <ArrowRight size={13} className="group-hover:translate-x-1 transition-transform" />
                   </span>
                   {/* Glow on hover */}
-                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl"
+                  <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] rounded-2xl"
                     style={{ boxShadow: "0 0 30px rgba(8,145,178,0.5)" }}
                   />
                 </Link>
@@ -172,23 +165,19 @@ export default function Navbar() {
 
               {/* ── Mobile Hamburger ── */}
               <button
-                className={`lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-xl transition-all border ${
-                  scrolled
-                    ? "bg-white border-slate-200 shadow-sm text-slate-900"
-                    : "bg-white/10 border-white/20 text-white backdrop-blur-md"
-                }`}
+                className={`lg:hidden relative w-10 h-10 flex flex-col items-center justify-center gap-1.5 rounded-xl transition-all border ${scrolled
+                  ? "bg-white border-slate-200 shadow-sm text-slate-900"
+                  : "bg-white/10 border-white/20 text-white backdrop-blur-md"
+                  }`}
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label={isOpen ? "Close menu" : "Open menu"}
               >
-                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${
-                  scrolled ? "bg-slate-900" : "bg-white"
-                } ${isOpen ? "translate-y-2 rotate-45" : ""}`} />
-                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${
-                  scrolled ? "bg-slate-900" : "bg-white"
-                } ${isOpen ? "opacity-0" : ""}`} />
-                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${
-                  scrolled ? "bg-slate-900" : "bg-white"
-                } ${isOpen ? "-translate-y-2 -rotate-45" : ""}`} />
+                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${scrolled ? "bg-slate-900" : "bg-white"
+                  } ${isOpen ? "translate-y-2 rotate-45" : ""}`} />
+                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${scrolled ? "bg-slate-900" : "bg-white"
+                  } ${isOpen ? "opacity-0" : ""}`} />
+                <span className={`block w-5 h-0.5 rounded-full transition-all duration-300 ${scrolled ? "bg-slate-900" : "bg-white"
+                  } ${isOpen ? "-translate-y-2 -rotate-45" : ""}`} />
               </button>
             </div>
           </div>
@@ -215,7 +204,7 @@ export default function Navbar() {
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 28, stiffness: 280 }}
+              transition={{ type: "spring", damping: 30, stiffness: 200 }}
               className="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-[#0a0f1c] z-50 lg:hidden flex flex-col shadow-2xl"
             >
               {/* Drawer header */}
@@ -241,15 +230,14 @@ export default function Navbar() {
                       key={link.name}
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: i * 0.05 + 0.1 }}
+                      transition={{ delay: i * 0.05 + 0.1, duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
                     >
                       <Link
                         href={link.href}
-                        className={`flex items-center justify-between px-4 py-4 rounded-2xl font-bold text-sm uppercase tracking-[0.15em] transition-all ${
-                          isActive
-                            ? "bg-aqua-600/20 text-aqua-300 border border-aqua-600/30"
-                            : "text-slate-300 hover:bg-white/5 hover:text-white"
-                        }`}
+                        className={`flex items-center justify-between px-4 py-4 rounded-2xl font-bold text-sm uppercase tracking-[0.15em] transition-all ${isActive
+                          ? "bg-aqua-600/20 text-aqua-300 border border-aqua-600/30"
+                          : "text-slate-300 hover:bg-white/5 hover:text-white"
+                          }`}
                       >
                         {link.name}
                         <ChevronRight size={16} className="opacity-40" />
