@@ -9,18 +9,19 @@ const featuredProducts = [
     name: "Litopenaeus Vannamei Nauplii",
     category: "SPF Certified Seed",
     description: "Disease-free, high-survival rate Pacific White Shrimp nauplii. Bred from premium USA imported broodstock.",
-    image: "/assets/WhatsApp Image 2026-04-20 at 10.16.54.jpeg"
+    image: "/hatchery_facility.png"
   },
   {
     name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
     description: "Robust post-larvae ready for high-density stocking. Acclimated to local Sri Lankan salinity conditions.",
-    image: "/assets/WhatsApp Image 2026-04-20 at 10.16.19.jpeg"
+    image: "/post_larvae.png"
   },
   {
-    name: "Hatchery Consultation",
+    name: "Farm Consultation",
     category: "Expert Services",
-    description: "Technical guidance on water quality and farm management by our MD, an Aquaculture Food Science specialist.",
+    description: "Technical guidance on pond preparation, water cleaning technology, and farm management by our Aquaculture specialist Owner & MD.",
+    image: "/images/farming.png"
   },
 ];
 
@@ -30,12 +31,12 @@ export default function Home() {
       <WhatsAppButton />
 
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center bg-[#05111c] pt-28 pb-20">
+      <section className="relative min-h-screen flex items-center justify-center bg-dark-deep pt-28 pb-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(14,116,144,0.15),transparent_55%)]" />
           <div className="absolute right-0 top-0 w-full lg:w-[60%] h-full overflow-hidden opacity-30 mix-blend-luminosity">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#05111c] via-[#05111c]/80 to-transparent z-10" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#05111c] via-transparent to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-r from-dark-deep via-dark-deep/80 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-transparent to-transparent z-10" />
             <img
               src="/assets/WhatsApp Image 2026-04-20 at 10.16.18.jpeg"
               alt="Hatchery operations background"
@@ -75,7 +76,7 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link
                   href="/products"
-                  className="group flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-[#05111c] px-8 py-4 rounded-full font-bold transition-all duration-500 ease-in-out w-full sm:w-auto shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+                  className="group flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-dark-deep px-8 py-4 rounded-full font-bold transition-all duration-500 ease-in-out w-full sm:w-auto shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
                 >
                   View Seed Availability
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
@@ -150,7 +151,7 @@ export default function Home() {
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-600 to-blue-600">Ambakandawilla, Chilaw</span>
               </h2>
               <p className="text-base sm:text-lg text-slate-600 leading-relaxed mb-12 max-w-xl font-light">
-                SUDU DUWA AQUA PRODUCTS (PVT) LTD is a trusted backbone of regional prawn farming. Under the direction of our Managing Director, <strong>Selvarajah Pradeeban</strong> (BSc Food Science & Technology), we operate two state-of-the-art facilities dedicated to producing the highest quality Pacific White Shrimp seeds.
+                SUDU DUWA AQUA PRODUCTS (PVT) LTD is a trusted backbone of regional shrimp aquaculture. Under the direction of our Managing Director, <strong>Selvarajah Pradeeban</strong> (BSc Food Science & Technology), we operate two state-of-the-art facilities dedicated to producing the highest quality Pacific White Shrimp seeds.
               </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
@@ -159,8 +160,8 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-aqua-50 to-blue-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6 shadow-sm">
                     <FlaskConical size={24} />
                   </div>
-                  <h4 className="font-bold text-slate-900 text-xl mb-3">Naupillia Center</h4>
-                  <p className="text-slate-500 leading-relaxed font-light text-sm">Dedicated facility in Ambakandawilla producing robust, SPF certified nauplii from USA broodstock.</p>
+                  <h4 className="font-bold text-slate-900 text-xl mb-3">Sudu Juwa Aqua Project Naupillia Center</h4>
+                  <p className="text-slate-500 leading-relaxed font-light text-sm">Dedicated facility in Ambakandawilla producing robust, SPF certified nauplii from USA imported broodstock.</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-md p-8 rounded-[30px] border border-white shadow-xl  transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] translate-y-4 sm:translate-y-8">
                   <div className="w-12 h-12 bg-gradient-to-br from-aqua-50 to-blue-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6 shadow-sm">
@@ -195,7 +196,7 @@ export default function Home() {
       </section>
 
       {/* Bento Grid Features Section (Premium Dark) */}
-      <section className="bg-[#05111c] py-32 relative overflow-hidden">
+      <section className="bg-dark-deep py-32 relative overflow-hidden">
         <div className="absolute top-0 left-0 w-full overflow-hidden leading-[0] rotate-180">
           <svg className="relative block w-full h-[40px] md:h-[80px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
             <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C59.71,118.08,130.83,119.28,193.38,103.7,243.68,91.13,285.55,67.75,321.39,56.44Z" className="fill-slate-50"></path>
@@ -210,7 +211,7 @@ export default function Home() {
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 leading-tight tracking-tight">
               Science-Driven <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-400 to-blue-400">Vannamei Breeding</span>
             </h2>
-            <p className="text-slate-400 text-base sm:text-lg font-light">
+            <p className="text-slate-300 text-base sm:text-lg font-light">
               Our operations are rooted in rigorous scientific methodology, optimizing every step for maximum survival rates at your commercial farm.
             </p>
           </div>
@@ -238,7 +239,7 @@ export default function Home() {
                   <ShieldCheck size={20} />
                 </div>
                 <h3 className="font-bold text-white text-xl mb-2">Biosecurity</h3>
-                <p className="text-slate-400 text-sm font-light">Strict quarantine and PCR pathogen screening protocols.</p>
+                <p className="text-slate-300 text-sm font-light">Strict quarantine and PCR pathogen screening protocols.</p>
               </div>
             </div>
 
@@ -249,22 +250,31 @@ export default function Home() {
                   <Droplets size={20} />
                 </div>
                 <h3 className="font-bold text-white text-xl mb-2">Water Quality</h3>
-                <p className="text-slate-400 text-sm font-light">Continuous monitoring of salinity, pH, and dissolved oxygen.</p>
+                <p className="text-slate-300 text-sm font-light leading-relaxed">Continuous monitoring of salinity, pH, micro & macro mineral levels, and Vibrio count.</p>
               </div>
             </div>
 
             {/* Bento Box 4 - Wide */}
-            <div className="md:col-span-3 group relative bg-gradient-to-r from-aqua-900/40 to-[#05111c] border border-aqua-500/20 p-8 rounded-[40px] flex items-center justify-between overflow-hidden">
-              <div className="relative z-10 flex items-center gap-6">
-                <div className="w-16 h-16 bg-aqua-500/20 border border-aqua-500/30 rounded-full flex items-center justify-center text-aqua-400 shrink-0">
+            <div className="md:col-span-3 group relative bg-gradient-to-r from-aqua-900/40 to-dark-deep border border-aqua-500/20 p-8 md:p-10 rounded-[40px] flex flex-col md:flex-row md:items-center justify-between gap-6 overflow-hidden">
+              <div className="relative z-10 flex items-start sm:items-center gap-6">
+                <div className="w-16 h-16 bg-aqua-500/20 border border-aqua-500/30 rounded-full flex items-center justify-center text-aqua-400 shrink-0 shadow-lg">
                   <Activity size={28} />
                 </div>
                 <div>
-                  <h3 className="font-bold text-white text-2xl mb-1">Expert Technical Guidance</h3>
-                  <p className="text-slate-400 font-light">Direct pond preparation and farm management support from our specialists.</p>
+                  <h3 className="font-bold text-white text-2xl mb-2">Expert Technical Guidance</h3>
+                  <div className="text-slate-300 font-light text-sm flex flex-col sm:flex-row sm:gap-6 gap-2">
+                    <span className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-aqua-400 shrink-0" />
+                      Direct Hatchery Shrimp Post larvae Production Technique
+                    </span>
+                    <span className="flex items-center gap-2">
+                      <span className="w-1.5 h-1.5 rounded-full bg-aqua-400 shrink-0" />
+                      Technique Support in Farm: Pond Preparation, water cleaning technology & farm management
+                    </span>
+                  </div>
                 </div>
               </div>
-              <Link href="/farming-practices" className="hidden md:flex items-center gap-2 text-aqua-400 font-bold hover:text-white transition-colors duration-500 ease-in-out relative z-10">
+              <Link href="/farming-practices" className="flex items-center gap-2 text-aqua-400 font-bold hover:text-white transition-colors duration-500 ease-in-out relative z-10 whitespace-nowrap">
                 Read Practices <ArrowRight size={18} />
               </Link>
             </div>
@@ -319,7 +329,23 @@ export default function Home() {
               <div className="space-y-6">
                 {[
                   { q: "Are your seeds SPF certified?", a: "Yes, all our Litopenaeus Vannamei nauplii and PL are bred under strict biosecurity protocols and certified Specific Pathogen Free." },
-                  { q: "Where is the broodstock from?", a: "We import premium, genetically superior broodstock directly from certified facilities in the USA." },
+                  { 
+                    q: "Where is the broodstock from?", 
+                    a: (
+                      <span>
+                        We import premium, genetically superior SPF broodstock directly from certified{" "}
+                        <a 
+                          href="https://www.shrimpimprovement.com" 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="text-aqua-600 hover:text-aqua-700 font-bold underline transition-colors"
+                        >
+                          Shrimp Improvement Systems (SIS)
+                        </a>{" "}
+                        facilities in Florida, USA.
+                      </span>
+                    )
+                  },
                   { q: "How do I place a bulk order for PL?", a: "Farmers can use the inquiry form on our website or contact us directly via WhatsApp (0706665295) to reserve batches." }
                 ].map((faq, i) => (
                   <div key={i} className="bg-slate-50 p-8 rounded-[30px] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">

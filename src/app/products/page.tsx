@@ -7,18 +7,19 @@ const products = [
     name: "Litopenaeus Vannamei Nauplii",
     category: "Hatchery Seed",
     description: "Premium Pacific White Shrimp nauplii bred at our Naupillia Center. SPF certified from USA lineage, ready for hatchery rearing.",
-    image: "/assets/WhatsApp Image 2026-04-20 at 10.16.54.jpeg"
+    image: "/hatchery_facility.png"
   },
   {
     name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
     description: "Robust post-larvae reared at St. Rogus Hatchery. Acclimated to local salinity levels for optimal farm survival and high-density yields.",
-    image: "/assets/WhatsApp Image 2026-04-20 at 10.16.19.jpeg"
+    image: "/post_larvae.png"
   },
   {
     name: "Farm Consultation",
     category: "Expert Services",
-    description: "Direct technical guidance from MD Selvarajah Pradeeban on pond preparation, biofloc technology, and water quality management.",
+    description: "Direct technical guidance from MD Selvarajah Pradeeban on pond preparation, biofloc/water cleaning technology, and farm management.",
+    image: "/images/farming.png"
   },
   {
     name: "Water Quality Testing",
@@ -112,7 +113,7 @@ export default function ProductsPage() {
       </section>
       
       {/* Lead Generation Section - Reserve Batch */}
-      <section className="bg-[#05111c] py-24 relative overflow-hidden">
+      <section className="bg-dark-deep py-24 relative overflow-hidden">
         <div className="absolute top-1/2 right-0 w-[600px] h-[600px] bg-aqua-600/10 rounded-full blur-[100px] -translate-y-1/2 pointer-events-none" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -143,7 +144,7 @@ export default function ProductsPage() {
             
             <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-12 rounded-[40px] shadow-2xl">
                <h3 className="text-2xl font-bold text-white mb-2">Request Quote & Availability</h3>
-               <p className="text-slate-400 text-sm mb-8 font-light">Fill out the form below or message us on WhatsApp for faster response.</p>
+               <p className="text-slate-300 text-sm mb-8 font-light">Fill out the form below or message us on WhatsApp for faster response.</p>
                
                <form className="space-y-5">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
@@ -164,8 +165,8 @@ export default function ProductsPage() {
                     <div>
                       <label className="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Seed Type</label>
                       <select className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all appearance-none cursor-pointer">
-                        <option className="bg-[#05111c]">Post-Larvae (PL)</option>
-                        <option className="bg-[#05111c]">Nauplii</option>
+                        <option className="bg-dark-deep">Post-Larvae (PL)</option>
+                        <option className="bg-dark-deep">Nauplii</option>
                       </select>
                     </div>
                   </div>

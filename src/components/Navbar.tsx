@@ -205,7 +205,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 30, stiffness: 200 }}
-              className="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-[#0a0f1c] z-50 lg:hidden flex flex-col shadow-2xl"
+              className="fixed top-0 right-0 bottom-0 w-80 max-w-full bg-dark-navy z-50 lg:hidden flex flex-col shadow-2xl"
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between p-6 border-b border-white/10">

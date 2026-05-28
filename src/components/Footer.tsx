@@ -3,7 +3,7 @@ import { Droplets, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#071828] border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
+    <footer className="bg-dark-medium border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
       {/* Decorative background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-aqua-600/4 rounded-full blur-[100px] pointer-events-none" />
       
@@ -24,7 +24,7 @@ export default function Footer() {
                 </span>
               </div>
             </Link>
-            <p className="text-slate-400 text-sm leading-relaxed font-light">
+            <p className="text-slate-300 text-sm leading-relaxed font-light">
               Sri Lanka's premier scientific prawn hatchery. We produce SPF-certified nauplii and highly robust post-larvae (PL) to empower regional aquaculture farmers.
             </p>
           </div>
@@ -33,11 +33,11 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h4>
             <ul className="space-y-4">
-              <li><Link href="/" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Home</Link></li>
-              <li><Link href="/about" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Our Science</Link></li>
-              <li><Link href="/products" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Seed Availability</Link></li>
-              <li><Link href="/farming-practices" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Hatchery Technology</Link></li>
-              <li><Link href="/faq" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Farmer FAQ</Link></li>
+              <li><Link href="/" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Home</Link></li>
+              <li><Link href="/about" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Our Science</Link></li>
+              <li><Link href="/products" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Seed Availability</Link></li>
+              <li><Link href="/farming-practices" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Hatchery Technology</Link></li>
+              <li><Link href="/faq" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors flex items-center gap-2"><span className="w-1 h-1 bg-aqua-600 rounded-full" /> Farmer FAQ</Link></li>
             </ul>
           </div>
 
@@ -50,7 +50,7 @@ export default function Footer() {
                   <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-aqua-400">
                     <MapPin size={18} />
                   </div>
-                  <span className="text-slate-400 text-sm leading-relaxed mt-1">
+                  <span className="text-slate-300 text-sm leading-relaxed mt-1">
                     136/52/B/1 Sangathddana<br />Puttalam Road, Chilaw
                   </span>
                 </li>
@@ -59,7 +59,7 @@ export default function Footer() {
                     <Mail size={18} />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <a href="mailto:suduaqua726@gmail.com" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors">suduaqua726@gmail.com</a>
+                    <a href="mailto:suduaqua726@gmail.com" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors">suduaqua726@gmail.com</a>
                   </div>
                 </li>
               </ul>
@@ -70,8 +70,8 @@ export default function Footer() {
                     <Phone size={18} />
                   </div>
                   <div className="flex flex-col gap-1">
-                    <a href="tel:0322055422" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors">0322055422 (Office)</a>
-                    <a href="tel:0706665295" className="text-slate-400 hover:text-aqua-400 text-sm transition-colors">0706665295 (Mobile)</a>
+                    <a href="tel:0322055422" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors">0322055422 (Office)</a>
+                    <a href="tel:0706665295" className="text-slate-300 hover:text-aqua-400 text-sm transition-colors">0706665295 (Mobile)</a>
                   </div>
                 </li>
                 <li>

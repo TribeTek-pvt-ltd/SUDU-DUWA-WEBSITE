@@ -19,6 +19,9 @@
 
   /* Dark section background */
   --color-sky-deep: #0e2a3a;
+  --color-dark-deep: #0d2c45;
+  --color-dark-medium: #113959;
+  --color-dark-navy: #164973;
 
   /* Refined champagne-gold — prestige accent */
   --color-gold-400: #d4a843;
@@ -97,6 +100,9 @@
   --gold:           #b8953a;
   --sky-deep:       #0e2a3a;
   --teal-signature: #1a5f7a;
+  --dark-deep:      #0d2c45;
+  --dark-medium:    #113959;
+  --dark-navy:      #164973;
 }
 
 @media (prefers-color-scheme: dark) {

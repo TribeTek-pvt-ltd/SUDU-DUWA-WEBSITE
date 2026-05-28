@@ -3,13 +3,13 @@ import { CheckCircle2, ShieldCheck, Droplets, FlaskConical, Microscope, Anchor }
 
 const steps = [
   {
-    title: "Broodstock Selection",
-    description: "We carefully select high-quality, SPF-certified USA lineage broodstock to ensure strong genetics and fast growth rates in our post-larvae.",
+    title: "Brood Stock",
+    description: "We source premium, genetically superior SPF USA SIS Fast Growth line Brood Stock to ensure fast growth rates and robust health in our post-larvae.",
     icon: <Anchor size={32} />,
   },
   {
     title: "Water Management",
-    description: "Advanced filtration and continuous monitoring of salinity, pH, and dissolved oxygen mimic pristine estuarine environments.",
+    description: "Advanced filtration and continuous monitoring of salinity, pH, micro and macro mineral levels, and Vibrio count.",
     icon: <Droplets size={32} />,
   },
   {
@@ -57,7 +57,7 @@ export default function HatcheryTechnologyPage() {
             </ul>
           </div>
           <div className="flex-1 w-full aspect-square bg-slate-50 rounded-[60px] overflow-hidden relative border border-slate-100 shadow-sm">
-             <div className="absolute inset-0 bg-[url('/assets/WhatsApp%20Image%202026-04-20%20at%2010.16.18.jpeg')] bg-cover bg-center opacity-80 mix-blend-multiply" />
+             <div className="absolute inset-0 bg-[url('/hatchery_facility.png')] bg-cover bg-center opacity-80 mix-blend-multiply" />
              <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl border border-white">
                   <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-white shadow-xl">
@@ -104,17 +104,31 @@ export default function HatcheryTechnologyPage() {
               <p className="text-slate-500 text-lg leading-relaxed">
                 Our hatcheries are equipped with cutting-edge laboratories to test water quality continuously. By maintaining perfect equilibrium in our tanks, we minimize stress on the Litopenaeus Vannamei seeds, ensuring they acclimate quickly once stocked in your ponds.
               </p>
-              <div className="grid grid-cols-2 gap-6">
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-1">Water Recirculation</h4>
-                  <p className="text-xs text-slate-500">Zero-exchange filtration</p>
+                  <h4 className="font-bold text-slate-900 mb-1">Water Quality Test</h4>
+                  <p className="text-xs text-slate-500">Salinity, pH & minerals balance</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-1">Micro-Algae Cultures</h4>
-                  <p className="text-xs text-slate-500">In-house live feed production</p>
+                  <h4 className="font-bold text-slate-900 mb-1">Vibrio Count</h4>
+                  <p className="text-xs text-slate-500">Bacterial monitoring</p>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                  <h4 className="font-bold text-slate-900 mb-1">Algae Quality Test</h4>
+                  <p className="text-xs text-slate-500">Indoor & outdoor pure live feed</p>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
+                  <h4 className="font-bold text-slate-900 mb-1">Post Larvae Quality</h4>
+                  <p className="text-xs text-slate-500">Vigor & physical screening</p>
+                </div>
+                <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 sm:col-span-2">
+                  <h4 className="font-bold text-slate-900 mb-1">MBV Test</h4>
+                  <p className="text-xs text-slate-500">Monodon Baculovirus screening</p>
                 </div>
               </div>
             </div>
+            
             <div className="grid grid-cols-1 gap-4">
                <div className="h-4 bg-slate-100 rounded-full overflow-hidden relative">
                  <div className="absolute top-0 left-0 h-full bg-slate-900 w-full opacity-10" />

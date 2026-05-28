@@ -11,8 +11,15 @@ interface ProductCardProps {
 
 const categoryColors: Record<string, string> = {
   "Hatchery Production": "bg-aqua-600/90 text-white",
-  "Prawn Seeds": "bg-gold-500/90 text-slate-900",
+  "Prawn Seeds": "bg-emerald-600/90 text-white",
   "Aquaculture Services": "bg-slate-800/90 text-white",
+  "SPF Certified Seed": "bg-aqua-500/90 text-white border border-aqua-400/20",
+  "Hatchery Seed": "bg-blue-600/90 text-white border border-blue-400/20",
+  "Farm Stocking": "bg-indigo-600/90 text-white border border-indigo-400/20",
+  "Expert Services": "bg-purple-600/90 text-white border border-purple-400/20",
+  "Laboratory Services": "bg-teal-600/90 text-white border border-teal-400/20",
+  "Biosecurity": "bg-rose-600/90 text-white border border-rose-400/20",
+  "Specialized Services": "bg-slate-700/90 text-white border border-slate-600/20",
 };
 
 // Real WhatsApp Icon SVG component

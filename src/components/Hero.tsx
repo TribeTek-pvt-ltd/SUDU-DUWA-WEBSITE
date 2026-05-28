@@ -14,15 +14,15 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, ctaText, ctaLink, image }: HeroProps) {
   return (
-    <section className="relative min-h-[60vh] md:min-h-[75vh] flex items-center overflow-hidden bg-[#0a0f1c] pt-32 pb-20">
+    <section className="relative min-h-[60vh] md:min-h-[75vh] flex items-center overflow-hidden bg-dark-navy pt-32 pb-20">
       {/* Background system - dark and premium */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(14,116,144,0.15),transparent_50%)]" />
         
         {image ? (
           <div className="absolute right-0 top-0 w-full lg:w-[60%] h-full overflow-hidden opacity-30 mix-blend-luminosity">
-             <div className="absolute inset-0 bg-gradient-to-r from-[#0a0f1c] via-[#0a0f1c]/80 to-transparent z-10" />
-             <div className="absolute inset-0 bg-gradient-to-t from-[#0a0f1c] via-transparent to-transparent z-10" />
+             <div className="absolute inset-0 bg-gradient-to-r from-dark-navy via-dark-navy/80 to-transparent z-10" />
+             <div className="absolute inset-0 bg-gradient-to-t from-dark-navy via-transparent to-transparent z-10" />
              <img 
                src={image} 
                alt="Hero background" 
@@ -75,7 +75,7 @@ export default function Hero({ title, subtitle, ctaText, ctaLink, image }: HeroP
             })}
           </h1>
           
-          <p className="text-base sm:text-lg md:text-xl text-slate-400 mb-10 sm:mb-12 max-w-xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed font-light">
+          <p className="text-base sm:text-lg md:text-xl text-slate-300 mb-10 sm:mb-12 max-w-xl lg:max-w-none mx-auto lg:mx-0 leading-relaxed font-light">
             {subtitle}
           </p>
           
