@@ -6,7 +6,7 @@ const products = [
   {
     name: "Litopenaeus Vannamei Nauplii",
     category: "Hatchery Seed",
-    description: "Premium Pacific White Shrimp nauplii bred at our Naupillia Center. SPF certified from USA lineage, ready for hatchery rearing.",
+    description: "Premium Pacific White Shrimp nauplii bred at our Nawpiliya Center. SPF certified from USA lineage, ready for hatchery rearing.",
     image: "/hatchery_facility.png"
   },
   {

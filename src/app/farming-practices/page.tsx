@@ -3,8 +3,8 @@ import { CheckCircle2, ShieldCheck, Droplets, FlaskConical, Microscope, Anchor }
 
 const steps = [
   {
-    title: "Brood Stock",
-    description: "We source premium, genetically superior SPF USA SIS Fast Growth line Brood Stock to ensure fast growth rates and robust health in our post-larvae.",
+    title: "Broodstock",
+    description: "USA SIS Fast Growth Line Broodstock",
     icon: <Anchor size={32} />,
   },
   {
@@ -45,7 +45,7 @@ export default function HatcheryTechnologyPage() {
             <ul className="space-y-4">
               {[
                 "Specific Pathogen Free (SPF) Certified",
-                "Advanced Water Recirculation Systems",
+                "Comprehensive Laboratory & Water Testing",
                 "Continuous PCR Pathogen Screening",
                 "Expert-Led Nutritional Protocols",
               ].map((item, i) => (
@@ -56,8 +56,9 @@ export default function HatcheryTechnologyPage() {
               ))}
             </ul>
           </div>
-          <div className="flex-1 w-full aspect-square bg-slate-50 rounded-[60px] overflow-hidden relative border border-slate-100 shadow-sm">
-             <div className="absolute inset-0 bg-[url('/hatchery_facility.png')] bg-cover bg-center opacity-80 mix-blend-multiply" />
+          <div className="flex-1 w-full aspect-square rounded-[60px] overflow-hidden relative border border-slate-100 shadow-sm group">
+             <img src="/assets/WhatsApp Image 2026-04-20 at 10.16.19.jpeg" alt="Hatchery Biosecurity Facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent" />
              <div className="absolute inset-0 flex items-center justify-center">
                 <div className="w-32 h-32 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl border border-white">
                   <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-white shadow-xl">
@@ -72,7 +73,7 @@ export default function HatcheryTechnologyPage() {
       {/* Process Steps */}
       <section className="bg-slate-50 py-24 border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our 4-Stage Breeding Protocol</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our 4 Stages</h2>
           <p className="text-slate-500 max-w-2xl mx-auto">
             Meticulous attention to detail at every stage of the nauplii and PL lifecycle ensures premium, high-survival seeds for commercial farmers.
           </p>
@@ -115,11 +116,11 @@ export default function HatcheryTechnologyPage() {
                   <p className="text-xs text-slate-500">Bacterial monitoring</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-1">Algae Quality Test</h4>
+                  <h4 className="font-bold text-slate-900 mb-1">Indoor / Outdoor Algae Quality Test</h4>
                   <p className="text-xs text-slate-500">Indoor & outdoor pure live feed</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-1">Post Larvae Quality</h4>
+                  <h4 className="font-bold text-slate-900 mb-1">Post-Larvae Quality Test</h4>
                   <p className="text-xs text-slate-500">Vigor & physical screening</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 sm:col-span-2">
