@@ -9,19 +9,19 @@ const featuredProducts = [
     name: "Litopenaeus Vannamei Nauplii",
     category: "SPF Certified Seed",
     description: "Disease-free, high-survival rate Pacific White Shrimp nauplii. Bred from premium USA imported broodstock.",
-    image: "/hatchery_facility.png"
+    image: "/assets/changes/Naupillia.jpeg"
   },
   {
     name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
     description: "Robust post-larvae ready for high-density stocking. Acclimated to local Sri Lankan salinity conditions.",
-    image: "/post_larvae.png"
+    image: "/assets/changes/Post larvae.jpeg"
   },
   {
     name: "Farm Consultation",
     category: "Expert Services",
     description: "Technical guidance on pond preparation, water cleaning technology, and farm management by our Aquaculture specialist Owner & MD.",
-    image: "/images/farming.png"
+    image: "/assets/changes/Farm consultation.jpeg"
   },
 ];
 
@@ -34,13 +34,16 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center justify-center bg-dark-deep pt-28 pb-20">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(14,116,144,0.15),transparent_55%)]" />
-          <div className="absolute right-0 top-0 w-full lg:w-[60%] h-full overflow-hidden opacity-30 mix-blend-luminosity">
+          <div className="absolute right-0 top-0 w-full lg:w-[60%] h-full overflow-hidden opacity-25 mix-blend-luminosity">
             <div className="absolute inset-0 bg-gradient-to-r from-dark-deep via-dark-deep/80 to-transparent z-10" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-transparent to-transparent z-10" />
-            <img
-              src="/assets/WhatsApp Image 2026-04-20 at 10.16.18.jpeg"
-              alt="Hatchery operations background"
-              className="w-full h-full object-cover animate-pulse-slow"
+            <video
+              src="/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.11.mp4"
+              className="w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
             />
           </div>
         </div>
@@ -179,7 +182,7 @@ export default function Home() {
               </svg>
 
               <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10 border-8 border-white group">
-                <img src="/assets/WhatsApp Image 2026-04-20 at 10.16.51.jpeg" alt="Hatchery Facility Operations" className="w-full h-full object-cover  transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                <img src="/assets/changes/feedback from farmers/WhatsApp Image 2026-05-28 at 12.00.11 (13).jpeg" alt="Hatchery Facility Operations" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
               </div>
 
@@ -219,14 +222,20 @@ export default function Home() {
           {/* Bento Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[250px]">
             {/* Bento Box 1 - Large */}
-            <div className="md:col-span-2 md:row-span-2 group relative bg-gradient-to-br from-white/10 to-white/5 border border-white/10 p-10 rounded-[40px] hover:bg-white/10 transition-all duration-500 ease-in-out overflow-hidden">
-              <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-br from-aqua-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out" />
-              <div className="relative z-10 h-full flex flex-col justify-end">
+            <div className="md:col-span-2 md:row-span-2 group relative bg-dark-deep border border-white/10 rounded-[40px] overflow-hidden">
+              <img 
+                src="/assets/changes/Hatchery tech--uncompromising.jpeg" 
+                alt="Hatchery Technology" 
+                className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-dark-deep/60 to-transparent z-0" />
+              <div className="absolute inset-0 bg-gradient-to-br from-aqua-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-in-out z-0" />
+              <div className="relative z-10 h-full flex flex-col justify-end p-10">
                 <div className="w-16 h-16 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center text-aqua-400 mb-6 shadow-lg backdrop-blur-md">
                   <Globe2 size={28} />
                 </div>
-                <h3 className="font-bold text-white text-3xl mb-4">USA Imported Broodstock</h3>
-                <p className="text-slate-300 text-lg leading-relaxed font-light max-w-lg">
+                <h3 className="font-bold text-white text-3xl mb-4 drop-shadow-lg">USA Imported Broodstock</h3>
+                <p className="text-white text-lg leading-relaxed font-light max-w-lg drop-shadow-md">
                   We source premium, genetically superior Litopenaeus Vannamei broodstock directly from certified facilities in the USA, ensuring exceptional growth rates and disease resistance.
                 </p>
               </div>
@@ -313,6 +322,86 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Hatchery Facility Tour Teaser Section */}
+      <section className="bg-white py-32 border-t border-slate-100 relative overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-20">
+            <div className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-slate-50 border border-slate-200 text-aqua-600 font-bold tracking-[0.2em] text-[10px] mb-6 uppercase shadow-sm">
+              <Globe2 size={12} /> Facility Tour Preview
+            </div>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight tracking-tight">
+              Virtual Hatchery <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-600 to-blue-600">Operations Tour</span>
+            </h2>
+            <p className="text-slate-500 text-base sm:text-lg font-light">
+              Explore a direct look into our advanced breeding tanks, industrial water purifiers, and quality-control systems in Ambakandawilla, Chilaw.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+            {/* Teaser 1 - Image */}
+            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
+              <img
+                src="/assets/changes/Post larvae.jpeg"
+                alt="High-Vigor Larvae"
+                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
+                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Larvae Stage</span>
+                <h4 className="text-white font-bold text-base leading-tight">High-Vigor Larvae</h4>
+              </div>
+            </div>
+
+            {/* Teaser 2 - Tank */}
+            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
+              <img
+                src="/assets/changes/brood stock.jpeg"
+                alt="Maturation Tanks"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
+                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Maturation</span>
+                <h4 className="text-white font-bold text-base leading-tight">Spawning Bay</h4>
+              </div>
+            </div>
+
+            {/* Teaser 3 - Filtration */}
+            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
+              <img
+                src="/assets/changes/water quality test.jpeg"
+                alt="Continuous Aeration"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
+                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Water Systems</span>
+                <h4 className="text-white font-bold text-base leading-tight">Aeration Systems</h4>
+              </div>
+            </div>
+
+            {/* Teaser 4 - QC */}
+            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
+              <img
+                src="/assets/changes/Laboratory work image.jpeg"
+                alt="Larvae Density Check"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
+                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Larvae Quality</span>
+                <h4 className="text-white font-bold text-base leading-tight">Seed Density Verification</h4>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center">
+            <Link
+              href="/gallery"
+              className="inline-flex items-center gap-3 bg-slate-900 text-white hover:bg-aqua-600 px-10 py-4.5 rounded-full font-bold transition-all duration-500 shadow-lg hover:-translate-y-0.5"
+            >
+              Explore Full Media Gallery (28+ Photos & Videos) <ArrowRight size={18} />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* FAQ & Final CTA (White Flow) */}
       <section className="bg-white pt-32 pb-40 border-t border-slate-100 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
@@ -387,6 +476,14 @@ export default function Home() {
                   >
                     Contact Office
                   </Link>
+                  <a
+                    href="https://chat.whatsapp.com/CsRdedlj0xgC1hbjHDlnUi"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-5 rounded-2xl font-bold hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1 mt-2"
+                  >
+                    Join WhatsApp Community
+                  </a>
                 </div>
               </div>
             </div>

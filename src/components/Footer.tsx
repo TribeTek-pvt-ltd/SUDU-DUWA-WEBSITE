@@ -6,23 +6,13 @@ export default function Footer() {
     <footer className="bg-dark-medium border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
       {/* Decorative background glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-aqua-600/4 rounded-full blur-[100px] pointer-events-none" />
-      
+
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-aqua-400 to-blue-600 rounded-xl flex items-center justify-center text-white shadow-[0_0_20px_rgba(14,116,144,0.4)]">
-                <Droplets size={24} />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-black tracking-tighter uppercase leading-none text-white">
-                  SUDU DUWA
-                </span>
-                <span className="text-[10px] font-black tracking-[0.3em] text-aqua-400 uppercase">
-                  AQUA PRODUCTS
-                </span>
-              </div>
+              <img src="/logo.jpeg" alt="Sudu Duwa Aqua Products Logo" className="h-14 w-auto rounded-full object-contain" />
             </Link>
             <p className="text-slate-300 text-sm leading-relaxed font-light">
               Sri Lanka's premier scientific prawn hatchery. We produce SPF-certified nauplii and highly robust post-larvae (PL) to empower regional aquaculture farmers.
@@ -63,7 +53,7 @@ export default function Footer() {
                   </div>
                 </li>
               </ul>
-              
+
               <ul className="space-y-5">
                 <li className="flex items-center gap-4">
                   <div className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center shrink-0 text-aqua-400">
@@ -75,8 +65,8 @@ export default function Footer() {
                   </div>
                 </li>
                 <li>
-                  <Link 
-                    href="/contact" 
+                  <Link
+                    href="/contact"
                     className="inline-flex items-center justify-center w-full bg-aqua-600/10 hover:bg-aqua-600/20 text-aqua-400 border border-aqua-600/30 px-6 py-3 rounded-xl font-bold text-sm transition-all mt-2"
                   >
                     Direct Technical Support

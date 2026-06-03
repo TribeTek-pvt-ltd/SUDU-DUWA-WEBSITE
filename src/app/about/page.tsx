@@ -1,7 +1,50 @@
+"use client";
+
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronLeft, ChevronRight, FlaskConical, Target, Eye, Microscope, Award, ShieldCheck } from "lucide-react";
 import Hero from "@/components/Hero";
-import { FlaskConical, Target, Eye, Microscope, Award, ShieldCheck } from "lucide-react";
+
+const carouselImages = [
+  {
+    src: "/assets/changes/brood stock.jpeg",
+    alt: "Primary maturation tanks and spawning systems"
+  },
+  {
+    src: "/assets/changes/WhatsApp Image 2026-05-28 at 12.00.11 (3).jpeg",
+    alt: "Biosecure maturation center racks and piping"
+  },
+  {
+    src: "/assets/changes/Post larvae.jpeg",
+    alt: "Post-larvae development and holding tanks"
+  },
+  {
+    src: "/assets/changes/water quality test.jpeg",
+    alt: "High capacity aeration networks and air supply blowers"
+  },
+  {
+    src: "/assets/changes/Hatchery.jpeg",
+    alt: "Hatchery facility layout at Ambakandawilla"
+  }
+];
 
 export default function AboutPage() {
+  const [currentIdx, setCurrentIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIdx((prev) => (prev + 1) % carouselImages.length);
+    }, 4500);
+    return () => clearInterval(timer);
+  }, []);
+
+  const handleNext = () => {
+    setCurrentIdx((prev) => (prev + 1) % carouselImages.length);
+  };
+
+  const handlePrev = () => {
+    setCurrentIdx((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
+  };
   return (
     <div className="flex flex-col gap-0 pb-0 bg-white">
       {/* Hero Section */}
@@ -12,7 +55,7 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-dark-medium via-dark-medium/80 to-transparent z-10" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-medium via-transparent to-transparent z-10" />
             <img
-              src="/assets/WhatsApp Image 2026-04-20 at 10.16.52.jpeg"
+              src="/assets/changes/Hatchery.jpeg"
               alt="Hatchery Science"
               className="w-full h-full object-cover"
             />
@@ -98,8 +141,55 @@ export default function AboutPage() {
             </div>
 
             <div className="flex-1 w-full relative">
-              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white group">
-                <img src="/assets/WhatsApp Image 2026-04-20 at 10.16.17.jpeg" alt="Scientific Aquaculture Facility" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white group relative bg-slate-950">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={currentIdx}
+                    src={carouselImages[currentIdx].src}
+                    alt={carouselImages[currentIdx].alt}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.6 }}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </AnimatePresence>
+                
+                {/* Carousel Controls */}
+                <div className="absolute inset-x-0 bottom-6 flex items-center justify-between px-6 z-20">
+                  <button
+                    onClick={handlePrev}
+                    className="w-10 h-10 rounded-full bg-slate-900/60 backdrop-blur-md flex items-center justify-center text-white hover:bg-slate-900/80 transition-colors"
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  
+                  {/* Indicators */}
+                  <div className="flex gap-1.5">
+                    {carouselImages.map((_, idx) => (
+                      <button
+                        key={idx}
+                        onClick={() => setCurrentIdx(idx)}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          currentIdx === idx ? "bg-white w-4" : "bg-white/40"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  
+                  <button
+                    onClick={handleNext}
+                    className="w-10 h-10 rounded-full bg-slate-900/60 backdrop-blur-md flex items-center justify-center text-white hover:bg-slate-900/80 transition-colors"
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </div>
+                
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent flex flex-col justify-end p-8 pt-20">
+                  <p className="text-white font-medium text-xs leading-relaxed drop-shadow-md">
+                    {carouselImages[currentIdx].alt}
+                  </p>
+                </div>
               </div>
               <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-aqua-50 rounded-3xl -z-10 hidden sm:block" />
             </div>
@@ -165,6 +255,31 @@ export default function AboutPage() {
               <p className="text-slate-500 text-sm leading-relaxed font-light">
                 Led by our MD's academic expertise, we provide unparalleled consultation to commercial farmers on pond preparation and water management.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community CTA */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="bg-slate-950 rounded-[40px] p-12 md:p-16 border border-slate-800 shadow-2xl max-w-4xl mx-auto relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-tr from-aqua-900/30 to-blue-900/30 opacity-50" />
+            <div className="relative z-10 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Ready to secure your high-vigor PL seeds?</h2>
+              <p className="text-slate-400 font-light max-w-2xl mx-auto">
+                Join our active WhatsApp community to get real-time updates on our seed availability and consult with our experts.
+              </p>
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="https://chat.whatsapp.com/CsRdedlj0xgC1hbjHDlnUi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-1 transition-all w-full sm:w-auto"
+                >
+                  Join WhatsApp Community
+                </a>
+              </div>
             </div>
           </div>
         </div>

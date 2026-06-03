@@ -11,6 +11,7 @@ const navLinks = [
   { name: "About", href: "/about" },
   { name: "Products", href: "/products" },
   { name: "Hatchery Tech", href: "/farming-practices" },
+  { name: "Gallery", href: "/gallery" },
   // { name: "FAQ", href: "/faq" },
   // { name: "Contact", href: "/contact" },
 ];
@@ -19,29 +20,8 @@ const navLinks = [
 function LogoBadge({ scrolled }: { scrolled: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-3 group" aria-label="Sudu Duwa Aqua Products Home">
-      {/* Monogram badge */}
-      {/* <div
-        className={`relative w-12 h-12 rounded-2xl flex items-center justify-center shadow-lg overflow-hidden transition-all duration-500 group-hover:scale-105 ${scrolled
-            ? "bg-gradient-to-br from-aqua-600 to-sky-deep text-white shadow-aqua-600/20"
-            : "bg-white/10 border border-white/25 text-white backdrop-blur-md"
-          }`}
-      >
-        <span className="font-display font-black text-base leading-none tracking-tighter select-none">SD</span>
-        Subtle shimmer sweep
-      <span className="absolute inset-0 shimmer-bg opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-    </div> */}
-
-      <div className="flex flex-col leading-none">
-        <span className={`text-base sm:text-lg font-black tracking-tighter uppercase leading-none transition-colors ${scrolled ? "text-slate-900" : "text-white"
-          }`}>
-          SUDU DUWA
-        </span>
-        <span className={`text-[8px] sm:text-[9px] font-black tracking-[0.2em] sm:tracking-[0.28em] uppercase transition-colors ${scrolled ? "text-aqua-600" : "text-aqua-300"
-          }`}>
-          AQUA PRODUCTS
-        </span>
-      </div>
-    </Link >
+      <img src="/logo.jpeg" alt="Sudu Duwa Aqua Products Logo" className="h-10 md:h-12 w-auto rounded-full object-contain" />
+    </Link>
   );
 }
 
@@ -144,8 +124,10 @@ export default function Navbar() {
                 </a>
 
                 {/* Shimmer gradient CTA */}
-                <Link
-                  href="/contact"
+                <a
+                  href="https://chat.whatsapp.com/CsRdedlj0xgC1hbjHDlnUi"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="relative group overflow-hidden px-7 py-3 rounded-2xl text-[11px] font-black uppercase tracking-widest text-white shadow-lg transition-all hover:-translate-y-0.5 active:scale-95"
                   style={{
                     background: "linear-gradient(135deg, #1a5f7a 0%, #113547 50%, #1a5f7a 100%)",
@@ -160,7 +142,7 @@ export default function Navbar() {
                   <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] rounded-2xl"
                     style={{ boxShadow: "0 0 30px rgba(8,145,178,0.5)" }}
                   />
-                </Link>
+                </a>
               </div>
 
               {/* ── Mobile Hamburger ── */}
@@ -209,9 +191,8 @@ export default function Navbar() {
             >
               {/* Drawer header */}
               <div className="flex items-center justify-between p-6 border-b border-white/10">
-                <div className="flex flex-col">
-                  <span className="text-white font-black tracking-tighter uppercase text-lg leading-none">SUDU DUWA</span>
-                  <span className="text-aqua-400 text-[9px] font-bold tracking-[0.28em] uppercase">AQUA PRODUCTS</span>
+                <div className="flex items-center">
+                  <img src="/logo.jpeg" alt="Sudu Duwa Aqua Products Logo" className="h-8 w-auto rounded-md object-contain" />
                 </div>
                 <button
                   onClick={() => setIsOpen(false)}
@@ -249,12 +230,14 @@ export default function Navbar() {
 
               {/* Drawer footer CTAs */}
               <div className="p-6 border-t border-white/10 space-y-3">
-                <Link
-                  href="/contact"
+                <a
+                  href="https://chat.whatsapp.com/CsRdedlj0xgC1hbjHDlnUi"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center justify-center gap-2 w-full bg-gradient-to-r from-aqua-600 to-aqua-700 text-white px-6 py-4 rounded-2xl font-black text-sm uppercase tracking-widest shadow-lg shadow-aqua-900/50 hover:from-aqua-500 hover:to-aqua-600 transition-all"
                 >
                   Check Availability <ArrowRight size={16} />
-                </Link>
+                </a>
                 <a
                   href="https://wa.me/94706665295"
                   target="_blank"

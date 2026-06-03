@@ -7,19 +7,19 @@ const products = [
     name: "Litopenaeus Vannamei Nauplii",
     category: "Hatchery Seed",
     description: "Premium Pacific White Shrimp nauplii bred at our Naupillia Center. SPF certified from USA lineage, ready for hatchery rearing.",
-    image: "/hatchery_facility.png"
+    image: "/assets/changes/Naupillia.jpeg"
   },
   {
     name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
     description: "Robust post-larvae reared at St. Rogus Hatchery. Acclimated to local salinity levels for optimal farm survival and high-density yields.",
-    image: "/post_larvae.png"
+    image: "/assets/changes/Post larvae.jpeg"
   },
   {
     name: "Farm Consultation",
     category: "Expert Services",
     description: "Direct technical guidance from MD Selvarajah Pradeeban on pond preparation, biofloc/water cleaning technology, and farm management.",
-    image: "/images/farming.png"
+    image: "/assets/changes/Farm consultation.jpeg"
   },
   {
     name: "Water Quality Testing",
@@ -178,6 +178,31 @@ export default function ProductsPage() {
                     Submit Inquiry <Send size={18} className="ml-1" />
                   </button>
                </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Community CTA */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <div className="bg-slate-950 rounded-[40px] p-12 md:p-16 border border-slate-800 shadow-2xl max-w-4xl mx-auto relative overflow-hidden">
+            <div className="absolute inset-0 bg-gradient-to-tr from-aqua-900/30 to-blue-900/30 opacity-50" />
+            <div className="relative z-10 space-y-6">
+              <h2 className="text-3xl md:text-4xl font-bold text-white">Ready to secure your high-vigor PL seeds?</h2>
+              <p className="text-slate-400 font-light max-w-2xl mx-auto">
+                Join our active WhatsApp community to get real-time updates on our seed availability and consult with our experts.
+              </p>
+              <div className="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a
+                  href="https://chat.whatsapp.com/CsRdedlj0xgC1hbjHDlnUi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-4 rounded-2xl font-bold hover:shadow-lg hover:-translate-y-1 transition-all w-full sm:w-auto"
+                >
+                  Join WhatsApp Community
+                </a>
+              </div>
             </div>
           </div>
         </div>
