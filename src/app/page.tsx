@@ -511,7 +511,7 @@ export default function Home() {
             "@type": "LocalBusiness",
             "name": "SUDU DUWA AQUA PRODUCTS (PVT) LTD",
             "description": "Premier Pacific White Shrimp (Litopenaeus Vannamei) Hatchery and Nauplii Center in Chilaw, Sri Lanka.",
-            "image": "https://sududuwa.com/logo.png",
+            "image": "https://sududuwa.com/logo.jpeg",
             "telephone": "+94 32 2055422",
             "email": "suduaqua726@gmail.com",
             "founder": {

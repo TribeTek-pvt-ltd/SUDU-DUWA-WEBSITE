@@ -136,7 +136,7 @@ export default function ContactPage() {
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
             "name": "SUDU DUWA AQUA PRODUCTS (PVT) LTD",
-            "image": "https://sududuwa.com/logo.png",
+            "image": "https://sududuwa.com/logo.jpeg",
             "telephone": "0322055422",
             "email": "suduaqua726@gmail.com",
             "founder": {

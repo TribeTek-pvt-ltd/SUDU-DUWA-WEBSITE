@@ -70,7 +70,7 @@ const businessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "SUDU DUWA AQUA PRODUCTS (PVT) LTD",
-  "image": "https://sududuwa.com/logo.png",
+  "image": "https://sududuwa.com/logo.jpeg",
   "@id": "https://sududuwa.com",
   "url": "https://sududuwa.com",
   "telephone": "+94322055422",
