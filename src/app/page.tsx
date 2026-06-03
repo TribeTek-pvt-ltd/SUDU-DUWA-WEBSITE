@@ -9,19 +9,19 @@ const featuredProducts = [
     name: "Litopenaeus Vannamei Nauplii",
     category: "SPF Certified Seed",
     description: "Disease-free, high-survival rate Pacific White Shrimp nauplii. Bred from premium USA imported broodstock.",
-    image: "/assets/changes/Naupillia.jpeg"
+    image: "/assets/changes/naupillia.jpeg"
   },
   {
     name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
     description: "Robust post-larvae ready for high-density stocking. Acclimated to local Sri Lankan salinity conditions.",
-    image: "/assets/changes/Post larvae.jpeg"
+    image: "/assets/changes/post-larvae.jpeg"
   },
   {
     name: "Farm Consultation",
     category: "Expert Services",
     description: "Technical guidance on pond preparation, water cleaning technology, and farm management by our Aquaculture specialist Owner & MD.",
-    image: "/assets/changes/Farm consultation.jpeg"
+    image: "/assets/changes/farm-consultation.jpeg"
   },
 ];
 
@@ -224,7 +224,7 @@ export default function Home() {
             {/* Bento Box 1 - Large */}
             <div className="md:col-span-2 md:row-span-2 group relative bg-dark-deep border border-white/10 rounded-[40px] overflow-hidden">
               <img
-                src="/assets/changes/Hatchery tech--uncompromising.jpeg"
+                src="/assets/changes/hatchery-tech-uncompromising.jpeg"
                 alt="Hatchery Technology"
                 className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 ease-in-out"
               />
@@ -351,7 +351,7 @@ export default function Home() {
             {/* Teaser 1 - Image */}
             <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
               <img
-                src="/assets/changes/Post larvae.jpeg"
+                src="/assets/changes/post-larvae.jpeg"
                 alt="High-Vigor Larvae"
                 className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out"
               />
@@ -364,7 +364,7 @@ export default function Home() {
             {/* Teaser 2 - Tank */}
             <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
               <img
-                src="/assets/changes/brood stock.jpeg"
+                src="/assets/changes/brood-stock.jpeg"
                 alt="Maturation Tanks"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -377,7 +377,7 @@ export default function Home() {
             {/* Teaser 3 - Filtration */}
             <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
               <img
-                src="/assets/changes/water quality test.jpeg"
+                src="/assets/changes/water-quality-test.jpeg"
                 alt="Continuous Aeration"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
@@ -390,7 +390,7 @@ export default function Home() {
             {/* Teaser 4 - QC */}
             <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
               <img
-                src="/assets/changes/Laboratory work image.jpeg"
+                src="/assets/changes/laboratory-work-image.jpeg"
                 alt="Larvae Density Check"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />

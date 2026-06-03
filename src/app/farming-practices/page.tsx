@@ -2,11 +2,11 @@ import Hero from "@/components/Hero";
 import { CheckCircle2, ShieldCheck, Droplets, FlaskConical, Microscope, Anchor, CalendarDays, Scale } from "lucide-react";
 
 const growthStages = [
-  { day: "30", weight: "5.5g", image: "/assets/changes/growth/30day 5.5g.jpeg" },
-  { day: "40", weight: "10g", image: "/assets/changes/growth/40day 10g.jpeg" },
-  { day: "50", weight: "15g", image: "/assets/changes/growth/50 days 15g.jpeg" },
-  { day: "60", weight: "22g", image: "/assets/changes/growth/60 days 22g.jpeg" },
-  { day: "70", weight: "28g", image: "/assets/changes/growth/70 days 28g.jpeg" }
+  { day: "30", weight: "5.5g", image: "/assets/changes/growth/30day-5.5g.jpeg" },
+  { day: "40", weight: "10g", image: "/assets/changes/growth/40day-10g.jpeg" },
+  { day: "50", weight: "15g", image: "/assets/changes/growth/50-days-15g.jpeg" },
+  { day: "60", weight: "22g", image: "/assets/changes/growth/60-days-22g.jpeg" },
+  { day: "70", weight: "28g", image: "/assets/changes/growth/70-days-28g.jpeg" }
 ];
 
 const steps = [
@@ -14,25 +14,25 @@ const steps = [
     title: "Brood Stock Selection",
     description: "We source premium, genetically superior SPF USA SIS Fast Growth line Brood Stock to ensure fast growth rates and robust health in our post-larvae.",
     icon: <Anchor size={24} />,
-    image: "/assets/changes/brood stock.jpeg"
+    image: "/assets/changes/brood-stock.jpeg"
   },
   {
     title: "Water Management",
     description: "Advanced filtration and continuous monitoring of salinity, pH, micro and macro mineral levels, and Vibrio count.",
     icon: <Droplets size={24} />,
-    image: "/assets/changes/water quality test.jpeg"
+    image: "/assets/changes/water-quality-test.jpeg"
   },
   {
     title: "Scientific Nutrition",
     description: "Larvae are fed optimized micro-algae and specialized formulations to ensure rapid development and high survival.",
     icon: <FlaskConical size={24} />,
-    image: "/assets/changes/Hatchery tech--uncompromising.jpeg"
+    image: "/assets/changes/hatchery-tech-uncompromising.jpeg"
   },
   {
     title: "Laboratory Screening",
     description: "Every batch of PL undergoes rigorous PCR pathogen testing and quality grading before being cleared for farm distribution.",
     icon: <Microscope size={24} />,
-    image: "/assets/changes/Laboratory work image.jpeg"
+    image: "/assets/changes/laboratory-work-image.jpeg"
   },
 ];
 
@@ -69,7 +69,7 @@ export default function HatcheryTechnologyPage() {
             </ul>
           </div>
           <div className="flex-1 w-full aspect-square bg-slate-50 rounded-[60px] overflow-hidden relative border border-slate-100 shadow-sm">
-            <img src="/assets/changes/Bacteria colony.jpeg" alt="Hatchery Facilities Biosecurity" className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" />
+            <img src="/assets/changes/bacteria-colony.jpeg" alt="Hatchery Facilities Biosecurity" className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-32 h-32 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl border border-white">
                 <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-white shadow-xl">

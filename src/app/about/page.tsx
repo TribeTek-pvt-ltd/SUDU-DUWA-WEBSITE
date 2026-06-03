@@ -7,23 +7,23 @@ import Hero from "@/components/Hero";
 
 const carouselImages = [
   {
-    src: "/assets/changes/brood stock.jpeg",
+    src: "/assets/changes/brood-stock.jpeg",
     alt: "Primary maturation tanks and spawning systems"
   },
   {
-    src: "/assets/changes/WhatsApp Image 2026-05-28 at 12.00.11 (3).jpeg",
+    src: "/assets/changes/whatsapp-image-2026-05-28-at-12.00.11-3.jpeg",
     alt: "Biosecure maturation center racks and piping"
   },
   {
-    src: "/assets/changes/Post larvae.jpeg",
+    src: "/assets/changes/post-larvae.jpeg",
     alt: "Post-larvae development and holding tanks"
   },
   {
-    src: "/assets/changes/water quality test.jpeg",
+    src: "/assets/changes/water-quality-test.jpeg",
     alt: "High capacity aeration networks and air supply blowers"
   },
   {
-    src: "/assets/changes/Hatchery.jpeg",
+    src: "/assets/changes/hatchery.jpeg",
     alt: "Hatchery facility layout at Ambakandawilla"
   }
 ];
@@ -55,7 +55,7 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-r from-dark-medium via-dark-medium/80 to-transparent z-10" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-medium via-transparent to-transparent z-10" />
             <img
-              src="/assets/changes/Hatchery.jpeg"
+              src="/assets/changes/hatchery.jpeg"
               alt="Hatchery Science"
               className="w-full h-full object-cover"
             />

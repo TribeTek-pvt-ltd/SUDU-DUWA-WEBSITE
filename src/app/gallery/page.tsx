@@ -44,7 +44,7 @@ const mediaItems = [
   {
     id: "img-0",
     type: "image",
-    src: "/assets/changes/Bacteria colony.jpeg",
+    src: "/assets/changes/bacteria-colony.jpeg",
     category: "systems",
     title: "Water Filtration Control",
     description: "Refined monitoring of sea water pipelines entering the maturation facility."
@@ -52,7 +52,7 @@ const mediaItems = [
   {
     id: "img-1",
     type: "image",
-    src: "/assets/changes/Breeding programs.jpeg",
+    src: "/assets/changes/breeding-programs.jpeg",
     category: "maturation",
     title: "Spawning & Maturation Tanks",
     description: "Circular maturation tanks raising SPF Litopenaeus Vannamei parent broodstock."
@@ -60,7 +60,7 @@ const mediaItems = [
   {
     id: "img-2",
     type: "image",
-    src: "/assets/changes/Farm consultation.jpeg",
+    src: "/assets/changes/farm-consultation.jpeg",
     category: "seeds",
     title: "Larval Stocking Preparation",
     description: "Post-larvae seeds prepared in transport-ready bags acclimated to target farm salinity."
@@ -68,7 +68,7 @@ const mediaItems = [
   {
     id: "img-3",
     type: "image",
-    src: "/assets/changes/Hatchery tech--uncompromising.jpeg",
+    src: "/assets/changes/hatchery-tech-uncompromising.jpeg",
     category: "maturation",
     title: "Hatchery Facility View",
     description: "Wide angle layout of our bio-secure prawn seed hatchery facility in Ambakandawilla."
@@ -76,7 +76,7 @@ const mediaItems = [
   {
     id: "img-4",
     type: "image",
-    src: "/assets/changes/Hatchery.jpeg",
+    src: "/assets/changes/hatchery.jpeg",
     category: "maturation",
     title: "Spawning Water Filtration",
     description: "Dedicated pipeline systems providing temperature-controlled water to maturation units."
@@ -84,7 +84,7 @@ const mediaItems = [
   {
     id: "img-5",
     type: "image",
-    src: "/assets/changes/Laboratory work image.jpeg",
+    src: "/assets/changes/laboratory-work-image.jpeg",
     category: "maturation",
     title: "Spawning Tanks Operation",
     description: "Rearing lines and tanks built for maximum bio-safety and easy sterilizing between cycles."
@@ -92,7 +92,7 @@ const mediaItems = [
   {
     id: "img-6",
     type: "image",
-    src: "/assets/changes/WhatsApp Image 2026-05-28 at 12.00.11 (3).jpeg",
+    src: "/assets/changes/whatsapp-image-2026-05-28-at-12.00.11-3.jpeg",
     category: "maturation",
     title: "Maturation Center Racks",
     description: "Secure, biological tracking boards and pipelines for breeding parent stock."
@@ -100,7 +100,7 @@ const mediaItems = [
   {
     id: "img-7",
     type: "image",
-    src: "/assets/changes/Naupillia.jpeg",
+    src: "/assets/changes/naupillia.jpeg",
     category: "maturation",
     title: "Spawning Tank Inspection",
     description: "Hatchery operators preparing tanks for a new batch of SPF nauplii seeds."
@@ -108,7 +108,7 @@ const mediaItems = [
   {
     id: "img-8",
     type: "image",
-    src: "/assets/changes/WhatsApp Image 2026-05-28 at 12.00.11 (5).jpeg",
+    src: "/assets/changes/whatsapp-image-2026-05-28-at-12.00.11-5.jpeg",
     category: "maturation",
     title: "Primary Maturation Row",
     description: "Parallel rows of spawning tanks ensuring continuous year-round availability of seeds."
@@ -116,7 +116,7 @@ const mediaItems = [
   {
     id: "img-9",
     type: "image",
-    src: "/assets/changes/Post larvae.jpeg",
+    src: "/assets/changes/post-larvae.jpeg",
     category: "maturation",
     title: "Tanks Setup Ambakandawilla",
     description: "Close examination of aeration jets in our maturation tanks."
@@ -124,7 +124,7 @@ const mediaItems = [
   {
     id: "img-10",
     type: "image",
-    src: "/assets/changes/brood stock.jpeg",
+    src: "/assets/changes/brood-stock.jpeg",
     category: "seeds",
     title: "Vigorous Nauplii Quality Control",
     description: "Sampling larvae to inspect for high physical activity and body completeness under light."
@@ -132,7 +132,7 @@ const mediaItems = [
   {
     id: "img-11",
     type: "image",
-    src: "/assets/changes/water quality test.jpeg",
+    src: "/assets/changes/water-quality-test.jpeg",
     category: "seeds",
     title: "Post-Larvae Holding Tanks",
     description: "Holding bays where post-larvae (PL) are fed high-nutrient live feed (Artemia & algae)."
@@ -140,7 +140,7 @@ const mediaItems = [
   {
     id: "img-12",
     type: "image",
-    src: "/assets/changes/Bacteria colony.jpeg",
+    src: "/assets/changes/bacteria-colony.jpeg",
     category: "seeds",
     title: "Nauplii Collection Setup",
     description: "Specialized fine mesh nets used to safely harvest nauplii from spawning tanks."
@@ -148,7 +148,7 @@ const mediaItems = [
   {
     id: "img-13",
     type: "image",
-    src: "/assets/changes/Breeding programs.jpeg",
+    src: "/assets/changes/breeding-programs.jpeg",
     category: "seeds",
     title: "Larvae Health Screenings",
     description: "PCR sampling and quality assessment of post-larvae seeds before farm delivery."
@@ -156,7 +156,7 @@ const mediaItems = [
   {
     id: "img-14",
     type: "image",
-    src: "/assets/changes/Farm consultation.jpeg",
+    src: "/assets/changes/farm-consultation.jpeg",
     category: "seeds",
     title: "PL Acclimation Operations",
     description: "Gradually adjusting water salinity to match customer farm ponds."
@@ -164,7 +164,7 @@ const mediaItems = [
   {
     id: "img-15",
     type: "image",
-    src: "/assets/changes/Hatchery tech--uncompromising.jpeg",
+    src: "/assets/changes/hatchery-tech-uncompromising.jpeg",
     category: "seeds",
     title: "High Survival Seed Batch",
     description: "Clean, disease-free Pacific White Shrimp larvae exhibiting optimal development."
@@ -172,7 +172,7 @@ const mediaItems = [
   {
     id: "img-16",
     type: "image",
-    src: "/assets/changes/Hatchery.jpeg",
+    src: "/assets/changes/hatchery.jpeg",
     category: "systems",
     title: "Main Water Filtration Unit",
     description: "Our large-scale multi-grade filtration plant purifying incoming water."
@@ -180,7 +180,7 @@ const mediaItems = [
   {
     id: "img-17",
     type: "image",
-    src: "/assets/changes/Laboratory work image.jpeg",
+    src: "/assets/changes/laboratory-work-image.jpeg",
     category: "systems",
     title: "Aeration Network Plumbing",
     description: "Primary oxygen supply lines feeding air to rearing and maturation centers."
@@ -188,7 +188,7 @@ const mediaItems = [
   {
     id: "img-18",
     type: "image",
-    src: "/assets/changes/Naupillia.jpeg",
+    src: "/assets/changes/naupillia.jpeg",
     category: "systems",
     title: "Water Disinfection Pipelines",
     description: "Sanitized sea water supply pipelines distribution systems."
@@ -196,7 +196,7 @@ const mediaItems = [
   {
     id: "img-19",
     type: "image",
-    src: "/assets/changes/Post larvae.jpeg",
+    src: "/assets/changes/post-larvae.jpeg",
     category: "systems",
     title: "Active Salinity Recirculation",
     description: "Plumbing controls designed for salinity adjustments in the PL acclimation bay."
@@ -204,7 +204,7 @@ const mediaItems = [
   {
     id: "img-20",
     type: "image",
-    src: "/assets/changes/brood stock.jpeg",
+    src: "/assets/changes/brood-stock.jpeg",
     category: "systems",
     title: "Algae Feeding Manifolds",
     description: "Liquid feed distribution lines ensuring precise delivery of live feed to the tanks."
@@ -212,7 +212,7 @@ const mediaItems = [
   {
     id: "img-21",
     type: "image",
-    src: "/assets/changes/water quality test.jpeg",
+    src: "/assets/changes/water-quality-test.jpeg",
     category: "systems",
     title: "Hatchery Sanitization Entrance",
     description: "Disinfection dip and strict biosecurity barriers at all operational entrances."
@@ -220,7 +220,7 @@ const mediaItems = [
   {
     id: "img-22",
     type: "image",
-    src: "/assets/changes/Bacteria colony.jpeg",
+    src: "/assets/changes/bacteria-colony.jpeg",
     category: "maturation",
     title: "Larvae Rearing Building",
     description: "Exterior of the primary biosecure maturation center building."
@@ -228,7 +228,7 @@ const mediaItems = [
   {
     id: "img-23",
     type: "image",
-    src: "/assets/changes/Breeding programs.jpeg",
+    src: "/assets/changes/breeding-programs.jpeg",
     category: "systems",
     title: "Water Intake Pipelines",
     description: "High-grade sea water intake piping designed for continuous, high-volume flow."
