@@ -39,7 +39,7 @@ const steps = [
 export default function HatcheryTechnologyPage() {
   return (
     <div className="flex flex-col gap-24 pb-24 bg-white">
-      <Hero 
+      <Hero
         title="Hatchery Technology"
         subtitle="Where science meets aquaculture. Our state-of-the-art hatcheries in Ambakandawilla produce Sri Lanka's most resilient Litopenaeus Vannamei seeds."
       />
@@ -57,7 +57,7 @@ export default function HatcheryTechnologyPage() {
             <ul className="space-y-4">
               {[
                 "Specific Pathogen Free (SPF) Certified",
-                "Advanced Water Recirculation Systems",
+                "Comprehensive Laboratory & Water Testing",
                 "Continuous PCR Pathogen Screening",
                 "Expert-Led Nutritional Protocols",
               ].map((item, i) => (
@@ -69,14 +69,14 @@ export default function HatcheryTechnologyPage() {
             </ul>
           </div>
           <div className="flex-1 w-full aspect-square bg-slate-50 rounded-[60px] overflow-hidden relative border border-slate-100 shadow-sm">
-             <img src="/assets/changes/Bacteria colony.jpeg" alt="Hatchery Facilities Biosecurity" className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" />
-             <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-32 h-32 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl border border-white">
-                   <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-white shadow-xl">
-                     <ShieldCheck size={32} />
-                   </div>
+            <img src="/assets/changes/Bacteria colony.jpeg" alt="Hatchery Facilities Biosecurity" className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" />
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="w-32 h-32 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl border border-white">
+                <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-white shadow-xl">
+                  <ShieldCheck size={32} />
                 </div>
-             </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -84,7 +84,7 @@ export default function HatcheryTechnologyPage() {
       {/* Process Steps */}
       <section className="bg-slate-50 py-24 border-y border-slate-100">
         <div className="container mx-auto px-4 md:px-6 text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our 4-Stage Breeding Protocol</h2>
+          <h2 className="text-3xl md:text-5xl font-bold text-slate-900 mb-6">Our 4 Stages</h2>
           <p className="text-slate-500 max-w-2xl mx-auto">
             Meticulous attention to detail at every stage of the nauplii and PL lifecycle ensures premium, high-survival seeds for commercial farmers.
           </p>
@@ -165,7 +165,7 @@ export default function HatcheryTechnologyPage() {
               <p className="text-slate-500 text-lg leading-relaxed">
                 Our hatcheries are equipped with cutting-edge laboratories to test water quality continuously. By maintaining perfect equilibrium in our tanks, we minimize stress on the Litopenaeus Vannamei seeds, ensuring they acclimate quickly once stocked in your ponds.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
                   <h4 className="font-bold text-slate-900 mb-1">Water Quality Test</h4>
@@ -176,11 +176,11 @@ export default function HatcheryTechnologyPage() {
                   <p className="text-xs text-slate-500">Bacterial monitoring</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-1">Algae Quality Test</h4>
+                  <h4 className="font-bold text-slate-900 mb-1">Indoor / Outdoor Algae Quality Test</h4>
                   <p className="text-xs text-slate-500">Indoor & outdoor pure live feed</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200">
-                  <h4 className="font-bold text-slate-900 mb-1">Post Larvae Quality</h4>
+                  <h4 className="font-bold text-slate-900 mb-1">Post-Larvae Quality Test</h4>
                   <p className="text-xs text-slate-500">Vigor & physical screening</p>
                 </div>
                 <div className="p-4 bg-slate-50 rounded-2xl border border-slate-200 sm:col-span-2">
@@ -189,20 +189,20 @@ export default function HatcheryTechnologyPage() {
                 </div>
               </div>
             </div>
-            
+
             <div className="grid grid-cols-1 gap-4">
-               <div className="h-4 bg-slate-100 rounded-full overflow-hidden relative">
-                 <div className="absolute top-0 left-0 h-full bg-slate-900 w-full opacity-10" />
-                 <div className="h-full bg-aqua-600 w-[99%] rounded-full relative z-10 flex items-center px-2">
-                   <span className="text-[10px] text-white font-bold tracking-widest">SALINITY OPTIMIZATION</span>
-                 </div>
-               </div>
-               <div className="h-4 bg-slate-100 rounded-full overflow-hidden relative">
-                 <div className="absolute top-0 left-0 h-full bg-slate-900 w-full opacity-10" />
-                 <div className="h-full bg-slate-900 w-[100%] rounded-full relative z-10 flex items-center px-2">
-                   <span className="text-[10px] text-white font-bold tracking-widest">PATHOGEN CLEARANCE RATE</span>
-                 </div>
-               </div>
+              <div className="h-4 bg-slate-100 rounded-full overflow-hidden relative">
+                <div className="absolute top-0 left-0 h-full bg-slate-900 w-full opacity-10" />
+                <div className="h-full bg-aqua-600 w-[99%] rounded-full relative z-10 flex items-center px-2">
+                  <span className="text-[10px] text-white font-bold tracking-widest">SALINITY OPTIMIZATION</span>
+                </div>
+              </div>
+              <div className="h-4 bg-slate-100 rounded-full overflow-hidden relative">
+                <div className="absolute top-0 left-0 h-full bg-slate-900 w-full opacity-10" />
+                <div className="h-full bg-slate-900 w-[100%] rounded-full relative z-10 flex items-center px-2">
+                  <span className="text-[10px] text-white font-bold tracking-widest">PATHOGEN CLEARANCE RATE</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>

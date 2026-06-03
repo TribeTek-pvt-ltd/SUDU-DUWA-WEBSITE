@@ -94,7 +94,7 @@ export default function AboutPage() {
                 </div>
                 <h2 className="text-3xl font-bold text-white mb-6">Our Mission</h2>
                 <p className="text-slate-300 leading-relaxed text-lg font-light">
-                  To utilize cutting-edge food science and aquaculture technology to breed superior USA-lineage Litopenaeus Vannamei nauplii and post-larvae (PL). We aim to empower local farmers with the healthiest seeds, driving the success of the aquaculture economy across the entire island of Sri Lanka.
+                  To utilize cutting-edge food science and aquaculture technology to breed superior USA-lineage Litopenaeus Vannamei nauplii and post-larvae (PL). We aim to empower local farmers with the healthiest seeds, driving the success of the aquaculture economy across the whole island Sri Lanka.
                 </p>
               </div>
             </div>
@@ -123,17 +123,17 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-slate-900">Our Operational Units</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <h4 className="font-bold text-slate-900 mb-2">Sudu Juwa Aqua Project Naupillia Center</h4>
+                    <h4 className="font-bold text-slate-900 mb-2">Sudu Duwa Aqua Project – Nawpiliya Center</h4>
                     <p className="text-sm text-slate-500 mb-4">No. 08, Ambakandawilla, Chilaw</p>
                     <p className="text-sm text-slate-600 leading-relaxed font-light">
-                      A specialized facility dedicated to the scientific breeding and initial rearing of Litopenaeus Vannamei nauplii. Engineered for highly robust and fast growth, utilizing premium USA imported lineage.
+                      A specialized facility dedicated to the scientific breeding and initial rearing of Litopenaeus Vannamei nauplii. Engineered utilizing premium USA imported lineage to ensure superior health. It produces a highly robust and fast-growth USA line optimized for high-yield commercial farming.
                     </p>
                   </div>
                   <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
                     <h4 className="font-bold text-slate-900 mb-2">St. Rogus Prawn Hatchery</h4>
                     <p className="text-sm text-slate-500 mb-4">Ambakandawilla, Chilaw</p>
                     <p className="text-sm text-slate-600 leading-relaxed font-light">
-                      Our advanced maturation and rearing unit, producing certified SPF PL (post-larvae) backed by years of aquaculture knowledge, hands-on experience, and rigorous science.
+                      Our advanced maturation and rearing unit, producing certified SPF PL (post-larvae) backed by deep aquaculture Knowledge, extensive hands-on Experience, and rigorous Science.
                     </p>
                   </div>
                 </div>

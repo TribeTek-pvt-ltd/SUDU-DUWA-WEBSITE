@@ -163,7 +163,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-aqua-50 to-blue-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6 shadow-sm">
                     <FlaskConical size={24} />
                   </div>
-                  <h4 className="font-bold text-slate-900 text-xl mb-3">Sudu Juwa Aqua Project Naupillia Center</h4>
+                  <h4 className="font-bold text-slate-900 text-xl mb-3">Sudu Duwa Aqua Project – Nawpiliya Center</h4>
                   <p className="text-slate-500 leading-relaxed font-light text-sm">Dedicated facility in Ambakandawilla producing robust, SPF certified nauplii from USA imported broodstock.</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-md p-8 rounded-[30px] border border-white shadow-xl  transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] translate-y-4 sm:translate-y-8">
@@ -223,9 +223,9 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-auto md:auto-rows-[250px]">
             {/* Bento Box 1 - Large */}
             <div className="md:col-span-2 md:row-span-2 group relative bg-dark-deep border border-white/10 rounded-[40px] overflow-hidden">
-              <img 
-                src="/assets/changes/Hatchery tech--uncompromising.jpeg" 
-                alt="Hatchery Technology" 
+              <img
+                src="/assets/changes/Hatchery tech--uncompromising.jpeg"
+                alt="Hatchery Technology"
                 className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 ease-in-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-dark-deep/60 to-transparent z-0" />
@@ -259,7 +259,7 @@ export default function Home() {
                   <Droplets size={20} />
                 </div>
                 <h3 className="font-bold text-white text-xl mb-2">Water Quality</h3>
-                <p className="text-slate-300 text-sm font-light leading-relaxed">Continuous monitoring of salinity, pH, micro & macro mineral levels, and Vibrio count.</p>
+                <p className="text-slate-300 text-sm font-light leading-relaxed">Continuous checking of pH, salinity, micro & macro mineral tests, and Vibrio count.</p>
               </div>
             </div>
 
@@ -271,15 +271,25 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-bold text-white text-2xl mb-2">Expert Technical Guidance</h3>
-                  <div className="text-slate-300 font-light text-sm flex flex-col sm:flex-row sm:gap-6 gap-2">
+                  <div className="text-slate-300 font-light text-sm flex flex-col gap-3">
                     <span className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-aqua-400 shrink-0" />
-                      Direct Hatchery Shrimp Post larvae Production Technique
+                      Direct hatchery / post-larvae production techniques
                     </span>
-                    <span className="flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 rounded-full bg-aqua-400 shrink-0" />
-                      Technique Support in Farm: Pond Preparation, water cleaning technology & farm management
-                    </span>
+                    <div className="flex flex-col gap-1 sm:pl-3.5">
+                      <span className="text-aqua-400 font-bold uppercase tracking-wider text-[10px]">Technical support in:</span>
+                      <div className="flex flex-wrap gap-x-4 gap-y-1">
+                        <span className="flex items-center gap-1.5 text-slate-300">
+                          <span className="w-1 h-1 rounded-full bg-slate-400 shrink-0" /> Farm pond preparation
+                        </span>
+                        <span className="flex items-center gap-1.5 text-slate-300">
+                          <span className="w-1 h-1 rounded-full bg-slate-400 shrink-0" /> Water cleaning technology
+                        </span>
+                        <span className="flex items-center gap-1.5 text-slate-300">
+                          <span className="w-1 h-1 rounded-full bg-slate-400 shrink-0" /> Farm management
+                        </span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -418,14 +428,14 @@ export default function Home() {
               <div className="space-y-6">
                 {[
                   { q: "Are your seeds SPF certified?", a: "Yes, all our Litopenaeus Vannamei nauplii and PL are bred under strict biosecurity protocols and certified Specific Pathogen Free." },
-                  { 
-                    q: "Where is the broodstock from?", 
+                  {
+                    q: "Where is the broodstock from?",
                     a: (
                       <span>
                         We import premium, genetically superior SPF broodstock directly from certified{" "}
-                        <a 
-                          href="https://www.shrimpimprovement.com" 
-                          target="_blank" 
+                        <a
+                          href="https://www.shrimpimprovement.com"
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="text-aqua-600 hover:text-aqua-700 font-bold underline transition-colors"
                         >
@@ -517,7 +527,7 @@ export default function Home() {
             "department": [
               {
                 "@type": "LocalBusiness",
-                "name": "SUDU DUWA AQUA PRODUCTS NAUPILLIA CENTER",
+                "name": "SUDU DUWA AQUA PRODUCTS NAWPILIYA CENTER",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "No 08, Ambakandawilla",

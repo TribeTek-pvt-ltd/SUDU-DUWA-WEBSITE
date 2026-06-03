@@ -4,7 +4,7 @@ import React from "react";
 const faqs = [
   {
     question: "Where are your hatchery operations located?",
-    answer: "Both of our primary operations—the Naupillia Center and the St. Rogus Prawn Hatchery—are located in Ambakandawilla, Chilaw. Our strategic coastal location provides access to pristine seawater, essential for healthy prawn breeding."
+    answer: "Both of our primary operations—the Nawpiliya Center and the St. Rogus Prawn Hatchery—are located in Ambakandawilla, Chilaw. Our strategic coastal location provides access to pristine seawater, essential for healthy prawn breeding."
   },
   {
     question: "Are your prawn seeds Specific Pathogen Free (SPF)?",
