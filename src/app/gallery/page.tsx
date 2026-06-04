@@ -11,7 +11,7 @@ const mediaItems = [
   {
     id: "vid-1",
     type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.11.mp4",
+    src: "/assets/changes/feedback-from-farmers/whatsapp-video-2026-05-28-at-12.00.11.mp4",
     category: "maturation",
     title: "Maturation Facility Tour",
     description: "Inside the St. Rogus maturation facility showing stocking tanks, temperature control, and water flows."
@@ -19,7 +19,7 @@ const mediaItems = [
   {
     id: "vid-2",
     type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.11 (1).mp4",
+    src: "/assets/changes/feedback-from-farmers/whatsapp-video-2026-05-28-at-12.00.11-1.mp4",
     category: "seeds",
     title: "Active Larvae Care",
     description: "Monitoring and grading young post-larvae under precise environmental conditions for maximum survival."
@@ -27,7 +27,7 @@ const mediaItems = [
   {
     id: "vid-3",
     type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.42.mp4",
+    src: "/assets/changes/feedback-from-farmers/whatsapp-video-2026-05-28-at-12.00.42.mp4",
     category: "systems",
     title: "Continuous Aeration",
     description: "Industrial blower pipelines providing high-volume oxygen distribution to keep larval seeds strong."
@@ -35,20 +35,20 @@ const mediaItems = [
   {
     id: "vid-4",
     type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.42 (1).mp4",
+    src: "/assets/changes/feedback-from-farmers/whatsapp-video-2026-05-28-at-12.00.42-1.mp4",
     category: "seeds",
     title: "High-Vigor SPF Nauplii",
     description: "Larval nauplii moving rapidly in the spawning tank, exhibiting outstanding activity and fitness."
   },
   // Images
-  {
-    id: "img-0",
-    type: "image",
-    src: "/assets/changes/bacteria-colony.jpeg",
-    category: "systems",
-    title: "Water Filtration Control",
-    description: "Refined monitoring of sea water pipelines entering the maturation facility."
-  },
+  // {
+  //   id: "img-0",
+  //   type: "image",
+  //   src: "/assets/changes/bacteria-colony.jpeg",
+  //   category: "systems",
+  //   title: "Water Filtration Control",
+  //   description: "Refined monitoring of sea water pipelines entering the maturation facility."
+  // },
   {
     id: "img-1",
     type: "image",
@@ -81,14 +81,14 @@ const mediaItems = [
     title: "Spawning Water Filtration",
     description: "Dedicated pipeline systems providing temperature-controlled water to maturation units."
   },
-  {
-    id: "img-5",
-    type: "image",
-    src: "/assets/changes/laboratory-work-image.jpeg",
-    category: "maturation",
-    title: "Spawning Tanks Operation",
-    description: "Rearing lines and tanks built for maximum bio-safety and easy sterilizing between cycles."
-  },
+  // {
+  //   id: "img-5",
+  //   type: "image",
+  //   src: "/assets/changes/laboratory-work-image.jpeg",
+  //   category: "maturation",
+  //   title: "Spawning Tanks Operation",
+  //   description: "Rearing lines and tanks built for maximum bio-safety and easy sterilizing between cycles."
+  // },
   {
     id: "img-6",
     type: "image",
@@ -121,156 +121,28 @@ const mediaItems = [
     title: "Tanks Setup Ambakandawilla",
     description: "Close examination of aeration jets in our maturation tanks."
   },
-  {
-    id: "img-10",
-    type: "image",
-    src: "/assets/changes/brood-stock.jpeg",
-    category: "seeds",
-    title: "Vigorous Nauplii Quality Control",
-    description: "Sampling larvae to inspect for high physical activity and body completeness under light."
-  },
-  {
-    id: "img-11",
-    type: "image",
-    src: "/assets/changes/water-quality-test.jpeg",
-    category: "seeds",
-    title: "Post-Larvae Holding Tanks",
-    description: "Holding bays where post-larvae (PL) are fed high-nutrient live feed (Artemia & algae)."
-  },
-  {
-    id: "img-12",
-    type: "image",
-    src: "/assets/changes/bacteria-colony.jpeg",
-    category: "seeds",
-    title: "Nauplii Collection Setup",
-    description: "Specialized fine mesh nets used to safely harvest nauplii from spawning tanks."
-  },
-  {
-    id: "img-13",
-    type: "image",
-    src: "/assets/changes/breeding-programs.jpeg",
-    category: "seeds",
-    title: "Larvae Health Screenings",
-    description: "PCR sampling and quality assessment of post-larvae seeds before farm delivery."
-  },
-  {
-    id: "img-14",
-    type: "image",
-    src: "/assets/changes/farm-consultation.jpeg",
-    category: "seeds",
-    title: "PL Acclimation Operations",
-    description: "Gradually adjusting water salinity to match customer farm ponds."
-  },
-  {
-    id: "img-15",
-    type: "image",
-    src: "/assets/changes/hatchery-tech-uncompromising.jpeg",
-    category: "seeds",
-    title: "High Survival Seed Batch",
-    description: "Clean, disease-free Pacific White Shrimp larvae exhibiting optimal development."
-  },
-  {
-    id: "img-16",
-    type: "image",
-    src: "/assets/changes/hatchery.jpeg",
-    category: "systems",
-    title: "Main Water Filtration Unit",
-    description: "Our large-scale multi-grade filtration plant purifying incoming water."
-  },
-  {
-    id: "img-17",
-    type: "image",
-    src: "/assets/changes/laboratory-work-image.jpeg",
-    category: "systems",
-    title: "Aeration Network Plumbing",
-    description: "Primary oxygen supply lines feeding air to rearing and maturation centers."
-  },
-  {
-    id: "img-18",
-    type: "image",
-    src: "/assets/changes/naupillia.jpeg",
-    category: "systems",
-    title: "Water Disinfection Pipelines",
-    description: "Sanitized sea water supply pipelines distribution systems."
-  },
-  {
-    id: "img-19",
-    type: "image",
-    src: "/assets/changes/post-larvae.jpeg",
-    category: "systems",
-    title: "Active Salinity Recirculation",
-    description: "Plumbing controls designed for salinity adjustments in the PL acclimation bay."
-  },
-  {
-    id: "img-20",
-    type: "image",
-    src: "/assets/changes/brood-stock.jpeg",
-    category: "systems",
-    title: "Algae Feeding Manifolds",
-    description: "Liquid feed distribution lines ensuring precise delivery of live feed to the tanks."
-  },
-  {
-    id: "img-21",
-    type: "image",
-    src: "/assets/changes/water-quality-test.jpeg",
-    category: "systems",
-    title: "Hatchery Sanitization Entrance",
-    description: "Disinfection dip and strict biosecurity barriers at all operational entrances."
-  },
-  {
-    id: "img-22",
-    type: "image",
-    src: "/assets/changes/bacteria-colony.jpeg",
-    category: "maturation",
-    title: "Larvae Rearing Building",
-    description: "Exterior of the primary biosecure maturation center building."
-  },
-  {
-    id: "img-23",
-    type: "image",
-    src: "/assets/changes/breeding-programs.jpeg",
-    category: "systems",
-    title: "Water Intake Pipelines",
-    description: "High-grade sea water intake piping designed for continuous, high-volume flow."
-  },
-  // Feedback Videos
-  {
-    id: "feedback-vid-1",
-    type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.11 (1).mp4",
-    category: "feedback",
-    title: "Farmer Success Story",
-    description: "A local farmer showcasing their successful harvest using our high-vigor post-larvae seeds."
-  },
-  {
-    id: "feedback-vid-2",
-    type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.11.mp4",
-    category: "feedback",
-    title: "Farm Growth Results",
-    description: "Video feedback demonstrating excellent growth rates achieved within the expected timeframe."
-  },
-  {
-    id: "feedback-vid-3",
-    type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.42 (1).mp4",
-    category: "feedback",
-    title: "Harvest Showcase",
-    description: "Farmers presenting the size and quality of Litopenaeus Vannamei harvested from their ponds."
-  },
-  {
-    id: "feedback-vid-4",
-    type: "video",
-    src: "/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.42.mp4",
-    category: "feedback",
-    title: "Healthy Farm Stock",
-    description: "Active, healthy adult shrimp caught during a routine pond check, showing great disease resistance."
-  },
+  // {
+  //   id: "img-10",
+  //   type: "image",
+  //   src: "/assets/changes/brood-stock.jpeg",
+  //   category: "seeds",
+  //   title: "Vigorous Nauplii Quality Control",
+  //   description: "Sampling larvae to inspect for high physical activity and body completeness under light."
+  // },
+  // {
+  //   id: "img-11",
+  //   type: "image",
+  //   src: "/assets/changes/water-quality-test.jpeg",
+  //   category: "seeds",
+  //   title: "Post-Larvae Holding Tanks",
+  //   description: "Holding bays where post-larvae (PL) are fed high-nutrient live feed (Artemia & algae)."
+  // },
+
   // Feedback Images
   {
     id: "feedback-img-1",
     type: "image",
-    src: "/assets/changes/feedback from farmers/WhatsApp Image 2026-05-28 at 12.00.11 (13).jpeg",
+    src: "/assets/changes/feedback-from-farmers/whatsapp-image-2026-05-28-at-12.00.11-13.jpeg",
     category: "feedback",
     title: "Premium Harvest Quality",
     description: "A close look at the premium quality and size of shrimp yielded by our partner farmers."
@@ -278,7 +150,7 @@ const mediaItems = [
   {
     id: "feedback-img-2",
     type: "image",
-    src: "/assets/changes/feedback from farmers/WhatsApp Image 2026-05-28 at 12.00.11 (14).jpeg",
+    src: "/assets/changes/feedback-from-farmers/whatsapp-image-2026-05-28-at-12.00.11-14.jpeg",
     category: "feedback",
     title: "Farmer Satisfaction",
     description: "Visual proof of high survival rates and impressive weight gain shared by our farming community."
@@ -335,7 +207,7 @@ export default function GalleryPage() {
       />
 
       <section className="container mx-auto px-4 md:px-6 py-20">
-        
+
         {/* Category Tabs */}
         <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-16">
           {categories.map((cat) => (
@@ -345,11 +217,10 @@ export default function GalleryPage() {
                 setActiveTab(cat.id);
                 setLightboxIndex(null);
               }}
-              className={`px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${
-                activeTab === cat.id
-                  ? "bg-slate-900 text-white shadow-lg shadow-slate-950/20 scale-105"
-                  : "bg-slate-50 text-slate-500 hover:text-slate-900 border border-slate-200/50 hover:bg-slate-100"
-              }`}
+              className={`px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] ${activeTab === cat.id
+                ? "bg-slate-900 text-white shadow-lg shadow-slate-950/20 scale-105"
+                : "bg-slate-50 text-slate-500 hover:text-slate-900 border border-slate-200/50 hover:bg-slate-100"
+                }`}
             >
               {cat.name}
             </button>
@@ -470,7 +341,7 @@ export default function GalleryPage() {
               </button>
 
               {/* Media Display */}
-              <div 
+              <div
                 className="relative max-w-full max-h-[70vh] flex items-center justify-center select-none"
                 onClick={(e) => e.stopPropagation()}
               >
