@@ -69,7 +69,7 @@ export default function HatcheryTechnologyPage() {
             </ul>
           </div>
           <div className="flex-1 w-full aspect-square bg-slate-50 rounded-[60px] overflow-hidden relative border border-slate-100 shadow-sm">
-            <img src="/assets/changes/bacteria-colony.jpeg" alt="Hatchery Facilities Biosecurity" className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" />
+            <img src="/assets/changes/green-yellow-colonies.png" alt="Hatchery Facilities Biosecurity" className="absolute inset-0 w-full h-full object-cover opacity-80 mix-blend-multiply" />
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="w-32 h-32 bg-white/90 backdrop-blur-xl rounded-full flex items-center justify-center shadow-2xl border border-white">
                 <div className="w-16 h-16 bg-slate-900 rounded-full flex items-center justify-center text-white shadow-xl">
