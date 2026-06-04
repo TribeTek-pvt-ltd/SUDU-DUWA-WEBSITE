@@ -38,7 +38,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-r from-dark-deep via-dark-deep/80 to-transparent z-10" />
             <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-transparent to-transparent z-10" />
             <video
-              src="/assets/changes/feedback from farmers/WhatsApp Video 2026-05-28 at 12.00.11.mp4"
+              src="/assets/changes/feedback-from-farmers/whatsapp-video-2026-05-28-at-12.00.11.mp4"
               className="w-full h-full object-cover"
               autoPlay
               muted
@@ -182,7 +182,7 @@ export default function Home() {
               </svg>
 
               <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10 border-8 border-white group">
-                <img src="/assets/changes/feedback from farmers/WhatsApp Image 2026-05-28 at 12.00.11 (13).jpeg" alt="Hatchery Facility Operations" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                <img src="/assets/changes/feedback-from-farmers/whatsapp-image-2026-05-28-at-12.00.11-13.jpeg" alt="Hatchery Facility Operations" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
               </div>
 
