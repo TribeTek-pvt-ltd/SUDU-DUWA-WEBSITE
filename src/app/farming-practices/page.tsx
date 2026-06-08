@@ -14,7 +14,7 @@ const steps = [
     title: "Brood Stock Selection",
     description: "We source premium, genetically superior SPF USA SIS Fast Growth line Brood Stock to ensure fast growth rates and robust health in our post-larvae.",
     icon: <Anchor size={24} />,
-    image: "/assets/changes/brood-stock.jpeg"
+    image: "/assets/changes/stages/broodstock.jpeg"
   },
   {
     title: "Water Management",

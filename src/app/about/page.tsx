@@ -7,7 +7,7 @@ import Hero from "@/components/Hero";
 
 const carouselImages = [
   {
-    src: "/assets/changes/brood-stock.jpeg",
+    src: "/assets/changes/stages/broodstock.jpeg",
     alt: "Primary maturation tanks and spawning systems"
   },
   {
@@ -15,7 +15,7 @@ const carouselImages = [
     alt: "Biosecure maturation center racks and piping"
   },
   {
-    src: "/assets/changes/post-larvae.jpeg",
+    src: "/assets/changes/stages/Post leave.jpeg",
     alt: "Post-larvae development and holding tanks"
   },
   {
@@ -123,7 +123,7 @@ export default function AboutPage() {
                 <h3 className="text-2xl font-bold text-slate-900">Our Operational Units</h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                   <div className="bg-slate-50 p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
-                    <h4 className="font-bold text-slate-900 mb-2">Sudu Duwa Aqua Project – Nawpiliya Center</h4>
+                    <h4 className="font-bold text-slate-900 mb-2">Sudu Duwa Aqua Project – Naupillia Center</h4>
                     <p className="text-sm text-slate-500 mb-4">No. 08, Ambakandawilla, Chilaw</p>
                     <p className="text-sm text-slate-600 leading-relaxed font-light">
                       A specialized facility dedicated to the scientific breeding and initial rearing of Litopenaeus Vannamei nauplii. Engineered utilizing premium USA imported lineage to ensure superior health. It produces a highly robust and fast-growth USA line optimized for high-yield commercial farming.
@@ -133,7 +133,7 @@ export default function AboutPage() {
                     <h4 className="font-bold text-slate-900 mb-2">St. Rogus Prawn Hatchery</h4>
                     <p className="text-sm text-slate-500 mb-4">Ambakandawilla, Chilaw</p>
                     <p className="text-sm text-slate-600 leading-relaxed font-light">
-                      Our advanced maturation and rearing unit, producing certified SPF PL (post-larvae) backed by deep aquaculture Knowledge, extensive hands-on Experience, and rigorous Science.
+                      Our advanced Larvae Rearing unit, producing certified SPF PL (post-larvae) backed by deep aquaculture Knowledge, extensive hands-on Experience, and rigorous Science.
                     </p>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ export default function AboutPage() {
                     className="absolute inset-0 w-full h-full object-cover"
                   />
                 </AnimatePresence>
-                
+
                 {/* Carousel Controls */}
                 <div className="absolute inset-x-0 bottom-6 flex items-center justify-between px-6 z-20">
                   <button
@@ -163,20 +163,19 @@ export default function AboutPage() {
                   >
                     <ChevronLeft size={18} />
                   </button>
-                  
+
                   {/* Indicators */}
                   <div className="flex gap-1.5">
                     {carouselImages.map((_, idx) => (
                       <button
                         key={idx}
                         onClick={() => setCurrentIdx(idx)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                          currentIdx === idx ? "bg-white w-4" : "bg-white/40"
-                        }`}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIdx === idx ? "bg-white w-4" : "bg-white/40"
+                          }`}
                       />
                     ))}
                   </div>
-                  
+
                   <button
                     onClick={handleNext}
                     className="w-10 h-10 rounded-full bg-slate-900/60 backdrop-blur-md flex items-center justify-center text-white hover:bg-slate-900/80 transition-colors"
@@ -184,7 +183,7 @@ export default function AboutPage() {
                     <ChevronRight size={18} />
                   </button>
                 </div>
-                
+
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent flex flex-col justify-end p-8 pt-20">
                   <p className="text-white font-medium text-xs leading-relaxed drop-shadow-md">
                     {carouselImages[currentIdx].alt}
@@ -253,7 +252,7 @@ export default function AboutPage() {
               </div>
               <h4 className="text-xl font-bold text-slate-900 mb-4">Technical Support</h4>
               <p className="text-slate-500 text-sm leading-relaxed font-light">
-                Led by our MD's academic expertise, we provide unparalleled consultation to commercial farmers on pond preparation and water management.
+                Led by our MD's academic expertise, we provide unparalleled consultation to Hatcheries and commercial farmers on pond preparation and water management.
               </p>
             </div>
           </div>

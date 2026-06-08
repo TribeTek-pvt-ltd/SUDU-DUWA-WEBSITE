@@ -7,13 +7,13 @@ const products = [
     name: "Litopenaeus Vannamei Nauplii",
     category: "Hatchery Seed",
     description: "Premium Pacific White Shrimp nauplii bred at our Naupillia Center. SPF certified from USA lineage, ready for hatchery rearing.",
-    image: "/assets/changes/naupillia.jpeg"
+    image: "/assets/changes/stages/nuapillia.jpeg"
   },
   {
     name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
     description: "Robust post-larvae reared at St. Rogus Hatchery. Acclimated to local salinity levels for optimal farm survival and high-density yields.",
-    image: "/assets/changes/post-larvae.jpeg"
+    image: "/assets/changes/stages/Post leave.jpeg"
   },
   {
     name: "Farm Consultation",
@@ -25,15 +25,19 @@ const products = [
     name: "Water Quality Testing",
     category: "Laboratory Services",
     description: "Scientific analysis of farm water parameters (pH, salinity, dissolved oxygen, ammonia) to ensure a safe environment for PL stocking.",
+    image: "/assets/changes/water-quality-test.jpeg"
+
   },
   {
     name: "Pathogen Screening",
     category: "Biosecurity",
+    image: "/assets/changes/Pathogen Screening.jpeg",
     description: "PCR testing and pathogen screening services to maintain strict biosecurity protocols on your commercial shrimp farm.",
   },
   {
     name: "Custom Breeding Programs",
     category: "Specialized Services",
+    image: "/assets/changes/custom-breeding-new.png",
     description: "Tailored breeding cycles for large-scale aquaculture operations requiring specific genetic traits and harvest timelines.",
   },
 ];

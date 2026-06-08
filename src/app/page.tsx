@@ -9,13 +9,13 @@ const featuredProducts = [
     name: "Litopenaeus Vannamei Nauplii",
     category: "SPF Certified Seed",
     description: "Disease-free, high-survival rate Pacific White Shrimp nauplii. Bred from premium USA imported broodstock.",
-    image: "/assets/changes/naupillia.jpeg"
+    image: "/assets/changes/stages/nuapillia.jpeg"
   },
   {
     name: "Vannamei Post-Larvae (PL)",
     category: "Farm Stocking",
     description: "Robust post-larvae ready for high-density stocking. Acclimated to local Sri Lankan salinity conditions.",
-    image: "/assets/changes/post-larvae.jpeg"
+    image: "/assets/changes/stages/Post leave.jpeg"
   },
   {
     name: "Farm Consultation",
@@ -163,7 +163,7 @@ export default function Home() {
                   <div className="w-12 h-12 bg-gradient-to-br from-aqua-50 to-blue-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6 shadow-sm">
                     <FlaskConical size={24} />
                   </div>
-                  <h4 className="font-bold text-slate-900 text-xl mb-3">Sudu Duwa Aqua Project – Nawpiliya Center</h4>
+                  <h4 className="font-bold text-slate-900 text-xl mb-3">Sudu Duwa Aqua Project – Naupilia Center</h4>
                   <p className="text-slate-500 leading-relaxed font-light text-sm">Dedicated facility in Ambakandawilla producing robust, SPF certified nauplii from USA imported broodstock.</p>
                 </div>
                 <div className="bg-white/80 backdrop-blur-md p-8 rounded-[30px] border border-white shadow-xl  transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] translate-y-4 sm:translate-y-8">
@@ -171,7 +171,7 @@ export default function Home() {
                     <Anchor size={24} />
                   </div>
                   <h4 className="font-bold text-slate-900 text-xl mb-3">St. Rogus Hatchery</h4>
-                  <p className="text-slate-500 leading-relaxed font-light text-sm">Advanced maturation facility ensuring rapid PL development and high farm-level survival.</p>
+                  <p className="text-slate-500 leading-relaxed font-light text-sm">Advanced Larval Rearing facility ensuring rapid PL development and high farm-level survival.</p>
                 </div>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function Home() {
             {/* Bento Box 1 - Large */}
             <div className="md:col-span-2 md:row-span-2 group relative bg-dark-deep border border-white/10 rounded-[40px] overflow-hidden">
               <img
-                src="/assets/changes/hatchery-tech-uncompromising.jpeg"
+                src="/assets/changes/USA_Imported_Broodstock.jpeg"
                 alt="Hatchery Technology"
                 className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 ease-in-out"
               />
@@ -347,57 +347,77 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {/* Teaser 1 - Image */}
-            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
-              <img
-                src="/assets/changes/post-larvae.jpeg"
-                alt="High-Vigor Larvae"
-                className="w-full h-full object-cover opacity-90 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700 ease-in-out"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
-                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Larvae Stage</span>
-                <h4 className="text-white font-bold text-base leading-tight">High-Vigor Larvae</h4>
-              </div>
-            </div>
+          {/* Winding Timeline Layout (No Scrolling) */}
+          <div className="relative w-full max-w-[1920px] mx-auto mb-20 px-2 sm:px-4 md:px-6 lg:px-12">
+            <div className="grid grid-cols-8 gap-0 sm:gap-1 md:gap-2 lg:gap-4 items-center h-[250px] sm:h-[350px] md:h-[450px] lg:h-[600px] xl:h-[800px] [--offset:2rem] sm:[--offset:3rem] md:[--offset:4rem] lg:[--offset:6rem] xl:[--offset:8rem]">
+              {[
+                { title: "Broodstock", img: "/assets/changes/stages/broodstock.jpeg", stage: "01" },
+                { title: "Mating", img: "/assets/changes/stages/egg_female.jpeg", stage: "02" },
+                { title: "Spawning", img: "/assets/changes/stages/spawming.jpeg", stage: "03" },
+                { title: "Eggs", img: "/assets/changes/stages/eggs.jpeg", stage: "04" },
+                { title: "Naupillia", img: "/assets/changes/stages/nuapillia.jpeg", stage: "05" },
+                { title: "Zoea", img: "/assets/changes/stages/zoea.jpeg", stage: "06" },
+                { title: "Mysis", img: "/assets/changes/stages/mysis.jpeg", stage: "07" },
+                { title: "Post Larvae", img: "/assets/changes/stages/Post leave.jpeg", stage: "08" }
+              ].map((item, i) => (
+                <div key={i} className="relative w-full flex justify-center items-center">
 
-            {/* Teaser 2 - Tank */}
-            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
-              <img
-                src="/assets/changes/brood-stock.jpeg"
-                alt="Maturation Tanks"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
-                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Maturation</span>
-                <h4 className="text-white font-bold text-base leading-tight">Spawning Bay</h4>
-              </div>
-            </div>
+                  {/* Connecting Curved Dashed Line (Except last item) */}
+                  {i < 7 && (
+                    <svg
+                      className="absolute left-1/2 w-full z-0 text-aqua-300 drop-shadow-sm pointer-events-none"
+                      style={{
+                        height: 'calc(var(--offset) * 2)',
+                        top: 'calc(50% - var(--offset))'
+                      }}
+                      viewBox="0 0 100 100"
+                      preserveAspectRatio="none"
+                    >
+                      <path
+                        d={i % 2 === 0
+                          ? "M 0 0 C 50 0, 50 100, 100 100"
+                          : "M 0 100 C 50 100, 50 0, 100 0"
+                        }
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeDasharray="6 6"
+                        vectorEffect="non-scaling-stroke"
+                      />
+                    </svg>
+                  )}
 
-            {/* Teaser 3 - Filtration */}
-            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
-              <img
-                src="/assets/changes/water-quality-test.jpeg"
-                alt="Continuous Aeration"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
-                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Water Systems</span>
-                <h4 className="text-white font-bold text-base leading-tight">Aeration Systems</h4>
-              </div>
-            </div>
+                  {/* The Card */}
+                  <div
+                    className="relative z-10 w-[110%] sm:w-[130%] md:w-[140%] lg:w-[150%] xl:w-[160%] flex flex-col items-center cursor-pointer"
+                    style={{
+                      transform: `translateY(calc(var(--offset) * ${i % 2 === 0 ? '-1' : '1'}))`
+                    }}
+                  >
+                    {/* Image Circle / Rounded Rect */}
+                    <div className="w-full aspect-square rounded-[25%] md:rounded-3xl overflow-hidden border-2 md:border-[3px] lg:border-4 border-white shadow-md lg:shadow-xl bg-slate-900 relative">
+                      <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
 
-            {/* Teaser 4 - QC */}
-            <div className="group relative aspect-square rounded-[30px] overflow-hidden bg-slate-950 border border-slate-100 shadow-sm">
-              <img
-                src="/assets/changes/laboratory-work-image.jpeg"
-                alt="Larvae Density Check"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent flex flex-col justify-end p-6 z-10">
-                <span className="text-[8px] font-bold text-aqua-400 uppercase tracking-widest mb-1">Larvae Quality</span>
-                <h4 className="text-white font-bold text-base leading-tight">Seed Density Verification</h4>
-              </div>
+                      {/* Text Over Image */}
+                      <div className="absolute inset-0 flex flex-col items-center justify-center md:justify-end pb-0 md:pb-2 lg:pb-3 bg-slate-900/30 md:bg-gradient-to-t md:from-slate-900/80 md:via-slate-900/10 md:to-transparent">
+                        <span className="text-[10px] md:text-xs lg:text-sm font-bold text-aqua-300 md:text-aqua-400 leading-none md:mb-0.5 lg:mb-1 drop-shadow-md">
+                          <span className="hidden md:inline">Stage </span>{item.stage}
+                        </span>
+                        <span className="text-[7px] sm:text-[9px] md:text-[10px] lg:text-sm font-bold text-white leading-tight text-center px-1 drop-shadow-md hidden md:block">
+                          {item.title}
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Mobile Title below image */}
+                    <span className="md:hidden text-[7px] sm:text-[9px] font-bold text-slate-800 mt-1 sm:mt-1.5 text-center leading-tight px-0.5 w-[150%] max-w-[60px]">
+                      {item.title}
+                    </span>
+
+                  </div>
+
+                </div>
+              ))}
             </div>
           </div>
 

@@ -100,23 +100,23 @@ const mediaItems = [
   {
     id: "img-7",
     type: "image",
-    src: "/assets/changes/naupillia.jpeg",
+    src: "/assets/changes/stages/nuapillia.jpeg",
     category: "maturation",
     title: "Spawning Tank Inspection",
     description: "Hatchery operators preparing tanks for a new batch of SPF nauplii seeds."
   },
-  {
-    id: "img-8",
-    type: "image",
-    src: "/assets/changes/whatsapp-image-2026-05-28-at-12.00.11-5.jpeg",
-    category: "maturation",
-    title: "Primary Maturation Row",
-    description: "Parallel rows of spawning tanks ensuring continuous year-round availability of seeds."
-  },
+  // {
+  //   id: "img-8",
+  //   type: "image",
+  //   src: "/assets/changes/whatsapp-image-2026-05-28-at-12.00.11-5.jpeg",
+  //   category: "maturation",
+  //   title: "Primary Maturation Row",
+  //   description: "Parallel rows of spawning tanks ensuring continuous year-round availability of seeds."
+  // },
   {
     id: "img-9",
     type: "image",
-    src: "/assets/changes/post-larvae.jpeg",
+    src: "/assets/changes/stages/Post leave.jpeg",
     category: "maturation",
     title: "Tanks Setup Ambakandawilla",
     description: "Close examination of aeration jets in our maturation tanks."
