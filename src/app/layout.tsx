@@ -73,7 +73,7 @@ const businessSchema = {
   "image": "https://sududuwa.com/logo.jpeg",
   "@id": "https://sududuwa.com",
   "url": "https://sududuwa.com",
-  "telephone": "+94322055422",
+  "telephone": "+0706665295",
   "email": "suduaqua726@gmail.com",
   "founder": { "@type": "Person", "name": "Selvarajah Pradeeban" },
   "address": {
@@ -85,7 +85,7 @@ const businessSchema = {
   "geo": { "@type": "GeoCoordinates", "latitude": 7.5744, "longitude": 79.7963 },
   "openingHoursSpecification": {
     "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
     "opens": "07:00",
     "closes": "18:00"
   },
