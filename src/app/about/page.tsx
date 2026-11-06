@@ -1,50 +1,61 @@
-"use client";
+import type { Metadata } from "next";
+import { Target, Eye, Microscope, Award, ShieldCheck } from "lucide-react";
+import AboutCarousel, { CarouselImage } from "@/components/AboutCarousel";
 
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, FlaskConical, Target, Eye, Microscope, Award, ShieldCheck } from "lucide-react";
-import Hero from "@/components/Hero";
+export const metadata: Metadata = {
+  title: "Our Science & Facilities | Prawn Hatchery Ambakandawilla Chilaw",
+  description:
+    "Learn about SUDU DUWA AQUA PRODUCTS' scientific prawn breeding protocols, USA imported SIS broodstock, and expert leadership by Selvarajah Pradeeban (BSc Food Science).",
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "Our Science & Facilities | SUDU DUWA AQUA PRODUCTS",
+    description:
+      "Advanced Pacific White Shrimp (Litopenaeus Vannamei) breeding and hatchery science in Ambakandawilla, Chilaw, Sri Lanka.",
+    url: "https://sududuwa.com/about",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 640,
+        height: 640,
+        alt: "SUDU DUWA Hatchery Facilities and Operations",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Our Science & Facilities | SUDU DUWA AQUA PRODUCTS",
+    description:
+      "Advanced Litopenaeus Vannamei breeding and hatchery science in Ambakandawilla, Chilaw, Sri Lanka.",
+    images: ["/logo.jpeg"],
+  },
+};
 
-const carouselImages = [
+const carouselImages: CarouselImage[] = [
   {
     src: "/assets/changes/stages/broodstock.jpeg",
-    alt: "Primary maturation tanks and spawning systems"
+    alt: "Primary maturation tanks and spawning systems",
   },
   {
     src: "/assets/changes/whatsapp-image-2026-05-28-at-12.00.11-3.jpeg",
-    alt: "Biosecure maturation center racks and piping"
+    alt: "Biosecure maturation center racks and piping",
   },
   {
     src: "/assets/changes/stages/Post leave.jpeg",
-    alt: "Post-larvae development and holding tanks"
+    alt: "Post-larvae development and holding tanks",
   },
   {
     src: "/assets/changes/water-quality-test.jpeg",
-    alt: "High capacity aeration networks and air supply blowers"
+    alt: "High capacity aeration networks and air supply blowers",
   },
   {
     src: "/assets/changes/hatchery.jpeg",
-    alt: "Hatchery facility layout at Ambakandawilla"
-  }
+    alt: "Hatchery facility layout at Ambakandawilla",
+  },
 ];
 
 export default function AboutPage() {
-  const [currentIdx, setCurrentIdx] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentIdx((prev) => (prev + 1) % carouselImages.length);
-    }, 4500);
-    return () => clearInterval(timer);
-  }, []);
-
-  const handleNext = () => {
-    setCurrentIdx((prev) => (prev + 1) % carouselImages.length);
-  };
-
-  const handlePrev = () => {
-    setCurrentIdx((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
-  };
   return (
     <div className="flex flex-col gap-0 pb-0 bg-white">
       {/* Hero Section */}
@@ -56,7 +67,7 @@ export default function AboutPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-dark-medium via-transparent to-transparent z-10" />
             <img
               src="/assets/changes/hatchery.jpeg"
-              alt="Hatchery Science"
+              alt="Hatchery Science Facility"
               className="w-full h-full object-cover"
             />
           </div>
@@ -67,7 +78,7 @@ export default function AboutPage() {
               Our Science & <span className="text-transparent bg-clip-text bg-gradient-to-r from-aqua-400 to-blue-500">Mission</span>
             </h1>
             <p className="text-lg md:text-xl text-slate-300 leading-relaxed font-light">
-              SUDU DUWA AQUA PRODUCTS is built on a foundation of rigorous scientific protocols, specialized breeding from USA imported broodstock, and a commitment to advancing Sri Lanka's Litopenaeus Vannamei aquaculture industry.
+              SUDU DUWA AQUA PRODUCTS is built on a foundation of rigorous scientific protocols, specialized breeding from USA imported broodstock, and a commitment to advancing Sri Lanka&apos;s Litopenaeus Vannamei aquaculture industry.
             </p>
           </div>
         </div>
@@ -140,65 +151,13 @@ export default function AboutPage() {
               </div>
             </div>
 
-            <div className="flex-1 w-full relative">
-              <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl border-8 border-white group relative bg-slate-950">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={currentIdx}
-                    src={carouselImages[currentIdx].src}
-                    alt={carouselImages[currentIdx].alt}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.6 }}
-                    className="absolute inset-0 w-full h-full object-cover"
-                  />
-                </AnimatePresence>
-
-                {/* Carousel Controls */}
-                <div className="absolute inset-x-0 bottom-6 flex items-center justify-between px-6 z-20">
-                  <button
-                    onClick={handlePrev}
-                    className="w-10 h-10 rounded-full bg-slate-900/60 backdrop-blur-md flex items-center justify-center text-white hover:bg-slate-900/80 transition-colors"
-                  >
-                    <ChevronLeft size={18} />
-                  </button>
-
-                  {/* Indicators */}
-                  <div className="flex gap-1.5">
-                    {carouselImages.map((_, idx) => (
-                      <button
-                        key={idx}
-                        onClick={() => setCurrentIdx(idx)}
-                        className={`w-2 h-2 rounded-full transition-all duration-300 ${currentIdx === idx ? "bg-white w-4" : "bg-white/40"
-                          }`}
-                      />
-                    ))}
-                  </div>
-
-                  <button
-                    onClick={handleNext}
-                    className="w-10 h-10 rounded-full bg-slate-900/60 backdrop-blur-md flex items-center justify-center text-white hover:bg-slate-900/80 transition-colors"
-                  >
-                    <ChevronRight size={18} />
-                  </button>
-                </div>
-
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-transparent to-transparent flex flex-col justify-end p-8 pt-20">
-                  <p className="text-white font-medium text-xs leading-relaxed drop-shadow-md">
-                    {carouselImages[currentIdx].alt}
-                  </p>
-                </div>
-              </div>
-              <div className="absolute -bottom-10 -left-10 w-48 h-48 bg-aqua-50 rounded-3xl -z-10 hidden sm:block" />
-            </div>
+            <AboutCarousel images={carouselImages} />
           </div>
         </div>
       </section>
 
       {/* Stats/Values Section */}
       <section className="bg-dark-medium py-24 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5" />
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center max-w-5xl mx-auto">
             <div className="space-y-4">
@@ -232,7 +191,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-aqua-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6">
                 <Microscope size={28} />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-4">Laboratory Tested</h4>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Laboratory Tested</h3>
               <p className="text-slate-500 text-sm leading-relaxed font-light">
                 Every batch of nauplii is rigorously tested under laboratory conditions to ensure absolute biosecurity and genetic robustness before dispatch.
               </p>
@@ -241,7 +200,7 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-aqua-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6">
                 <ShieldCheck size={28} />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-4">Strict Biosecurity</h4>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Strict Biosecurity</h3>
               <p className="text-slate-500 text-sm leading-relaxed font-light">
                 Our hatcheries enforce strict quarantine protocols, ensuring a contamination-free environment that yields resilient, fast-growing Litopenaeus Vannamei seeds.
               </p>
@@ -250,9 +209,9 @@ export default function AboutPage() {
               <div className="w-14 h-14 bg-aqua-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6">
                 <Award size={28} />
               </div>
-              <h4 className="text-xl font-bold text-slate-900 mb-4">Technical Support</h4>
+              <h3 className="text-xl font-bold text-slate-900 mb-4">Technical Support</h3>
               <p className="text-slate-500 text-sm leading-relaxed font-light">
-                Led by our MD's academic expertise, we provide unparalleled consultation to Hatcheries and commercial farmers on pond preparation and water management.
+                Led by our MD&apos;s academic expertise, we provide unparalleled consultation to Hatcheries and commercial farmers on pond preparation and water management.
               </p>
             </div>
           </div>

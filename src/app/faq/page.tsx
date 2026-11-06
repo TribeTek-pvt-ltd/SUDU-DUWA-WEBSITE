@@ -1,46 +1,82 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import React from "react";
+
+export const metadata: Metadata = {
+  title: "Farmer FAQ | Prawn Seeds & Hatchery Questions",
+  description:
+    "Frequently asked questions regarding SPF Litopenaeus Vannamei nauplii, post-larvae (PL) stocking, biosecurity PCR testing, and oxygenated delivery across Sri Lanka.",
+  alternates: {
+    canonical: "/faq",
+  },
+  openGraph: {
+    title: "Farmer FAQ | SUDU DUWA AQUA PRODUCTS",
+    description:
+      "Answers about SPF prawn seeds, biosecurity protocols, farm delivery, and aquaculture technical consultation in Chilaw.",
+    url: "https://sududuwa.com/faq",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 640,
+        height: 640,
+        alt: "SUDU DUWA AQUA PRODUCTS FAQ",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Farmer FAQ | SUDU DUWA AQUA PRODUCTS",
+    description:
+      "Answers about SPF prawn seeds, biosecurity protocols, farm delivery, and aquaculture technical consultation in Chilaw.",
+    images: ["/logo.jpeg"],
+  },
+};
 
 const faqs = [
   {
     question: "Where are your hatchery operations located?",
-    answer: "Both of our primary operations—the Nawpiliya Center and the St. Rogus Prawn Hatchery—are located in Ambakandawilla, Chilaw. Our strategic coastal location provides access to pristine seawater, essential for healthy prawn breeding."
+    answer:
+      "Both of our primary operations—the Nawpiliya Center and the St. Rogus Prawn Hatchery—are located in Ambakandawilla, Chilaw. Our strategic coastal location provides access to pristine seawater, essential for healthy prawn breeding.",
   },
   {
     question: "Are your prawn seeds Specific Pathogen Free (SPF)?",
-    answer: "Yes. We maintain rigorous biosecurity protocols and laboratory screening. All our nauplii and post-larvae (PL) are SPF certified, ensuring they are free from major viral pathogens before they are stocked in your farm."
+    answer:
+      "Yes. We maintain rigorous biosecurity protocols and laboratory screening. All our nauplii and post-larvae (PL) are SPF certified, ensuring they are free from major viral pathogens before they are stocked in your farm.",
   },
   {
     question: "How do I place an order for post-larvae (PL)?",
-    answer: "You can contact us via our Head Office phone line (0322055422) or message us directly on WhatsApp (0706665295). Due to breeding cycles, we recommend contacting us in advance to check availability and reserve your stock."
+    answer:
+      "You can contact us via our Head Office phone line (+94322055422) or message us directly on WhatsApp (+94706665295). Due to breeding cycles, we recommend contacting us in advance to check availability and reserve your stock.",
   },
   {
     question: "Do you provide technical support for farmers?",
-    answer: "Absolutely. Our Managing Director, Selvarajah Pradeeban, holds a BSc in Food Science and Technology with a Specialization in Aquaculture. We provide our buyers with expert technical consultation on pond preparation, water quality management, and feeding protocols to ensure high survival rates."
+    answer:
+      "Absolutely. Our Managing Director, Selvarajah Pradeeban, holds a BSc in Food Science and Technology with a Specialization in Aquaculture. We provide our buyers with expert technical consultation on pond preparation, water quality management, and feeding protocols to ensure high survival rates.",
   },
   {
     question: "How do you transport the nauplii and PL to my farm?",
-    answer: "We use specialized, oxygenated transportation bags packed inside temperature-controlled insulated boxes. This minimizes transit stress and ensures the seeds arrive at your farm healthy and ready for acclimation."
-  }
+    answer:
+      "We use specialized, oxygenated transportation bags packed inside temperature-controlled insulated boxes. This minimizes transit stress and ensures the seeds arrive at your farm healthy and ready for acclimation.",
+  },
 ];
 
 export default function FAQPage() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    "mainEntity": faqs.map(faq => ({
+    "mainEntity": faqs.map((faq) => ({
       "@type": "Question",
       "name": faq.question,
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": faq.answer
-      }
-    }))
+        "text": faq.answer,
+      },
+    })),
   };
 
   return (
     <div className="flex flex-col gap-16 pb-24 bg-white">
-      <Hero 
+      <Hero
         title="Frequently Asked Questions"
         subtitle="Find quick answers regarding our prawn seeds, biosecurity protocols, and technical farm support."
       />
@@ -48,7 +84,10 @@ export default function FAQPage() {
       <section className="container mx-auto px-4 md:px-6">
         <div className="max-w-4xl mx-auto space-y-8">
           {faqs.map((faq, index) => (
-            <div key={index} className="bg-slate-50 rounded-[30px] p-8 md:p-10 border border-slate-200 shadow-sm hover:shadow-md transition-shadow">
+            <div
+              key={index}
+              className="bg-slate-50 rounded-[30px] p-8 md:p-10 border border-slate-200 shadow-sm hover:shadow-md transition-shadow"
+            >
               <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4">
                 {faq.question}
               </h2>

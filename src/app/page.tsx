@@ -1,8 +1,9 @@
-import Hero from "@/components/Hero";
 import ProductCard from "@/components/ProductCard";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import HeroLeadForm from "@/components/HeroLeadForm";
+import RetentionEmailCapture from "@/components/RetentionEmailCapture";
 import Link from "next/link";
-import { ArrowRight, ShieldCheck, Anchor, CheckCircle2, FlaskConical, Droplets, Activity, ChevronRight, Send, Globe2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, Anchor, CheckCircle2, FlaskConical, Droplets, Activity, ChevronRight, Globe2, Sparkles, Layers } from "lucide-react";
 
 const featuredProducts = [
   {
@@ -39,11 +40,13 @@ export default function Home() {
             <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-transparent to-transparent z-10" />
             <video
               src="/assets/changes/feedback-from-farmers/whatsapp-video-2026-05-28-at-12.00.11.mp4"
+              poster="/assets/changes/USA_Imported_Broodstock.jpeg"
               className="w-full h-full object-cover"
               autoPlay
               muted
               loop
               playsInline
+              aria-hidden="true"
             />
           </div>
         </div>
@@ -79,55 +82,60 @@ export default function Home() {
               <div className="flex flex-col sm:flex-row items-center gap-4">
                 <Link
                   href="/products"
-                  className="group flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-dark-deep px-8 py-4 rounded-full font-bold transition-all duration-500 ease-in-out w-full sm:w-auto shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
+                  className="group flex items-center justify-center gap-3 bg-white hover:bg-slate-100 text-dark-deep px-8 py-4 rounded-full font-bold transition-all duration-300 ease-in-out w-full sm:w-auto shadow-[0_0_30px_rgba(255,255,255,0.15)] hover:shadow-[0_0_40px_rgba(255,255,255,0.3)]"
                 >
                   View Seed Availability
                   <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                 </Link>
                 <Link
+                  href="/products#reserve"
+                  className="group flex items-center justify-center gap-3 bg-aqua-500/20 hover:bg-aqua-500/30 text-aqua-300 border border-aqua-500/40 px-8 py-4 rounded-full font-bold transition-all duration-300 ease-in-out w-full sm:w-auto"
+                >
+                  Reserve Next Cycle Batch
+                </Link>
+                <Link
                   href="/about"
-                  className="group flex items-center justify-center gap-3 bg-transparent hover:bg-white/5 text-white border border-white/20 px-8 py-4 rounded-full font-bold transition-all duration-500 ease-in-out w-full sm:w-auto"
+                  className="group flex items-center justify-center gap-3 bg-transparent hover:bg-white/5 text-white border border-white/20 px-8 py-4 rounded-full font-bold transition-all duration-300 ease-in-out w-full sm:w-auto"
                 >
                   Our Facilities
                 </Link>
               </div>
+
+              {/* Direct Internal Links to /products Categories */}
+              <div className="mt-8 pt-6 border-t border-white/10 flex flex-wrap items-center justify-center lg:justify-start gap-2">
+                <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider mr-2 flex items-center gap-1">
+                  <Sparkles size={12} className="text-aqua-400" /> Direct Products:
+                </span>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-aqua-300 hover:text-white text-xs border border-white/10 transition-all"
+                >
+                  Nauplii Seeds →
+                </Link>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-aqua-300 hover:text-white text-xs border border-white/10 transition-all"
+                >
+                  Post-Larvae (PL) →
+                </Link>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-aqua-300 hover:text-white text-xs border border-white/10 transition-all"
+                >
+                  Water Quality Lab →
+                </Link>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-1 px-3 py-1.5 rounded-full bg-white/5 hover:bg-white/15 text-aqua-300 hover:text-white text-xs border border-white/10 transition-all"
+                >
+                  MD Consultation →
+                </Link>
+              </div>
             </div>
 
-            {/* Quick Lead Capture Form */}
-            <div className="lg:col-span-5 relative">
-              <div className="absolute -inset-4 bg-gradient-to-br from-aqua-500/20 to-blue-500/20 rounded-[40px] blur-2xl z-0" />
-              <div className="bg-white/10 backdrop-blur-xl border border-white/20 p-8 md:p-10 rounded-[30px] relative z-10 shadow-2xl">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-aqua-500/20 flex items-center justify-center text-aqua-400">
-                    <Send size={18} />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white">Check PL Stock</h3>
-                    <p className="text-sm text-slate-300 font-light">Get a quote for your next cycle</p>
-                  </div>
-                </div>
-
-                <form className="space-y-4">
-                  <div>
-                    <label className="sr-only">Farm Name / Contact Person</label>
-                    <input type="text" placeholder="Farm Name / Your Name" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all duration-500 ease-in-out" />
-                  </div>
-                  <div className="grid grid-cols-2 gap-4">
-                    <div>
-                      <label className="sr-only">Phone Number</label>
-                      <input type="tel" placeholder="Phone (WhatsApp)" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all duration-500 ease-in-out" />
-                    </div>
-                    <div>
-                      <label className="sr-only">Required Quantity</label>
-                      <input type="text" placeholder="Est. PL Quantity" className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-3.5 text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-aqua-500/50 transition-all duration-500 ease-in-out" />
-                    </div>
-                  </div>
-                  <button type="submit" className="w-full bg-gradient-to-r from-aqua-500 to-blue-500 hover:from-aqua-400 hover:to-blue-400 text-white font-bold py-4 rounded-xl shadow-lg transition-all duration-500 ease-in-out transform hover:-translate-y-0.5 mt-2 flex items-center justify-center gap-2">
-                    Request Availability <ChevronRight size={18} />
-                  </button>
-                </form>
-                <p className="text-center text-slate-400 text-xs mt-4 font-light">We typically respond within 2-4 hours.</p>
-              </div>
+            {/* Quick Lead Capture Form with GA4 Key Event Tracking */}
+            <div className="lg:col-span-5">
+              <HeroLeadForm />
             </div>
 
           </div>
@@ -159,19 +167,25 @@ export default function Home() {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 relative">
                 <div className="absolute -inset-4 bg-gradient-to-br from-aqua-100 to-transparent opacity-50 blur-2xl rounded-full -z-10" />
-                <div className="bg-white/80 backdrop-blur-md p-8 rounded-[30px] border border-white shadow-xl  transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)]">
+                <div className="bg-white/80 backdrop-blur-md p-8 rounded-[30px] border border-white shadow-xl transition-all duration-300">
                   <div className="w-12 h-12 bg-gradient-to-br from-aqua-50 to-blue-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6 shadow-sm">
                     <FlaskConical size={24} />
                   </div>
                   <h4 className="font-bold text-slate-900 text-xl mb-3">Sudu Duwa Aqua Project – Naupilia Center</h4>
-                  <p className="text-slate-500 leading-relaxed font-light text-sm">Dedicated facility in Ambakandawilla producing robust, SPF certified nauplii from USA imported broodstock.</p>
+                  <p className="text-slate-500 leading-relaxed font-light text-sm mb-4">Dedicated facility in Ambakandawilla producing robust, SPF certified nauplii from USA imported broodstock.</p>
+                  <Link href="/products" className="inline-flex items-center gap-1.5 text-aqua-600 hover:text-aqua-700 font-bold text-xs uppercase tracking-wider">
+                    Order Nauplii Batches <ChevronRight size={14} />
+                  </Link>
                 </div>
-                <div className="bg-white/80 backdrop-blur-md p-8 rounded-[30px] border border-white shadow-xl  transition-all duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] translate-y-4 sm:translate-y-8">
+                <div className="bg-white/80 backdrop-blur-md p-8 rounded-[30px] border border-white shadow-xl transition-all duration-300 translate-y-4 sm:translate-y-8">
                   <div className="w-12 h-12 bg-gradient-to-br from-aqua-50 to-blue-50 rounded-2xl flex items-center justify-center text-aqua-600 mb-6 shadow-sm">
                     <Anchor size={24} />
                   </div>
                   <h4 className="font-bold text-slate-900 text-xl mb-3">St. Rogus Hatchery</h4>
-                  <p className="text-slate-500 leading-relaxed font-light text-sm">Advanced Larval Rearing facility ensuring rapid PL development and high farm-level survival.</p>
+                  <p className="text-slate-500 leading-relaxed font-light text-sm mb-4">Advanced Larval Rearing facility ensuring rapid PL development and high farm-level survival.</p>
+                  <Link href="/products" className="inline-flex items-center gap-1.5 text-aqua-600 hover:text-aqua-700 font-bold text-xs uppercase tracking-wider">
+                    Stock Post-Larvae (PL) <ChevronRight size={14} />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -182,7 +196,12 @@ export default function Home() {
               </svg>
 
               <div className="aspect-[4/5] rounded-[40px] overflow-hidden shadow-2xl relative z-10 border-8 border-white group">
-                <img src="/assets/changes/feedback-from-farmers/whatsapp-image-2026-05-28-at-12.00.11-13.jpeg" alt="Hatchery Facility Operations" className="w-full h-full object-cover transition-transform duration-[1.2s] ease-[cubic-bezier(0.22,1,0.36,1)]" />
+                <img
+                  src="/assets/changes/feedback-from-farmers/whatsapp-image-2026-05-28-at-12.00.11-13.jpeg"
+                  alt="SUDU DUWA Hatchery Facility Operations and Maturation Tanks in Chilaw"
+                  loading="lazy"
+                  className="w-full h-full object-cover transition-transform duration-700 ease-in-out group-hover:scale-105"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/50 to-transparent" />
               </div>
 
@@ -225,7 +244,8 @@ export default function Home() {
             <div className="md:col-span-2 md:row-span-2 group relative bg-dark-deep border border-white/10 rounded-[40px] overflow-hidden">
               <img
                 src="/assets/changes/USA_Imported_Broodstock.jpeg"
-                alt="Hatchery Technology"
+                alt="SPF USA Imported Broodstock Litopenaeus Vannamei"
+                loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:opacity-60 group-hover:scale-105 transition-all duration-700 ease-in-out"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-dark-deep via-dark-deep/60 to-transparent z-0" />
@@ -235,31 +255,43 @@ export default function Home() {
                   <Globe2 size={28} />
                 </div>
                 <h3 className="font-bold text-white text-3xl mb-4 drop-shadow-lg">USA Imported Broodstock</h3>
-                <p className="text-white text-lg leading-relaxed font-light max-w-lg drop-shadow-md">
-                  We source premium, genetically superior Litopenaeus Vannamei broodstock directly from certified facilities in the USA, ensuring exceptional growth rates and disease resistance.
+                <p className="text-white text-lg leading-relaxed font-light max-w-lg drop-shadow-md mb-4">
+                  We source premium, genetically superior Litopenaeus Vannamei broodstock directly from certified facilities in Florida, USA, ensuring exceptional growth rates and disease resistance.
                 </p>
+                <Link
+                  href="/products"
+                  className="inline-flex items-center gap-2 bg-white/15 hover:bg-white/25 text-white border border-white/20 px-6 py-3 rounded-full text-sm font-bold backdrop-blur-md transition-all w-fit"
+                >
+                  View USA Broodstock Seeds <ArrowRight size={16} />
+                </Link>
               </div>
             </div>
 
             {/* Bento Box 2 */}
-            <div className="group relative bg-white/5 border border-white/10 p-8 rounded-[40px] hover:bg-white/10 transition-all duration-500 ease-in-out overflow-hidden">
+            <div className="group relative bg-white/5 border border-white/10 p-8 rounded-[40px] hover:bg-white/10 transition-all duration-300 overflow-hidden">
               <div className="relative z-10 h-full flex flex-col justify-end">
                 <div className="w-12 h-12 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center text-blue-400 mb-4 backdrop-blur-md">
                   <ShieldCheck size={20} />
                 </div>
                 <h3 className="font-bold text-white text-xl mb-2">Biosecurity</h3>
-                <p className="text-slate-300 text-sm font-light">Strict quarantine and PCR pathogen screening protocols.</p>
+                <p className="text-slate-300 text-sm font-light mb-3">Strict quarantine and PCR pathogen screening protocols.</p>
+                <Link href="/products" className="inline-flex items-center gap-1 text-aqua-400 hover:text-white font-bold text-xs">
+                  PCR Tested Seeds <ChevronRight size={14} />
+                </Link>
               </div>
             </div>
 
             {/* Bento Box 3 */}
-            <div className="group relative bg-white/5 border border-white/10 p-8 rounded-[40px] hover:bg-white/10 transition-all duration-500 ease-in-out overflow-hidden">
+            <div className="group relative bg-white/5 border border-white/10 p-8 rounded-[40px] hover:bg-white/10 transition-all duration-300 overflow-hidden">
               <div className="relative z-10 h-full flex flex-col justify-end">
                 <div className="w-12 h-12 bg-white/10 border border-white/10 rounded-2xl flex items-center justify-center text-aqua-400 mb-4 backdrop-blur-md">
                   <Droplets size={20} />
                 </div>
                 <h3 className="font-bold text-white text-xl mb-2">Water Quality</h3>
-                <p className="text-slate-300 text-sm font-light leading-relaxed">Continuous checking of pH, salinity, micro & macro mineral tests, and Vibrio count.</p>
+                <p className="text-slate-300 text-sm font-light leading-relaxed mb-3">Continuous checking of pH, salinity, minerals, and Vibrio counts.</p>
+                <Link href="/products" className="inline-flex items-center gap-1 text-aqua-400 hover:text-white font-bold text-xs">
+                  Lab Testing Services <ChevronRight size={14} />
+                </Link>
               </div>
             </div>
 
@@ -274,7 +306,7 @@ export default function Home() {
                   <div className="text-slate-300 font-light text-sm flex flex-col gap-3">
                     <span className="flex items-center gap-2">
                       <span className="w-1.5 h-1.5 rounded-full bg-aqua-400 shrink-0" />
-                      Direct hatchery / post-larvae production techniques
+                      Direct hatchery & post-larvae production techniques led by Selvarajah Pradeeban (BSc Aquaculture)
                     </span>
                     <div className="flex flex-col gap-1 sm:pl-3.5">
                       <span className="text-aqua-400 font-bold uppercase tracking-wider text-[10px]">Technical support in:</span>
@@ -293,9 +325,51 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <Link href="/farming-practices" className="flex items-center gap-2 text-aqua-400 font-bold hover:text-white transition-colors duration-500 ease-in-out relative z-10 whitespace-nowrap">
-                Read Practices <ArrowRight size={18} />
-              </Link>
+              <div className="flex flex-col sm:flex-row items-center gap-4 relative z-10">
+                <Link
+                  href="/products"
+                  className="flex items-center gap-2 bg-gradient-to-r from-aqua-500 to-blue-500 hover:from-aqua-400 hover:to-blue-400 text-slate-950 font-bold px-6 py-3.5 rounded-full text-sm shadow-lg whitespace-nowrap transition-all"
+                >
+                  Order Seeds & Lab Services <ArrowRight size={16} />
+                </Link>
+                <Link href="/farming-practices" className="flex items-center gap-2 text-aqua-400 font-bold hover:text-white transition-colors text-sm whitespace-nowrap">
+                  Read Practices <ArrowRight size={16} />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Commercial Seed Comparison Quick Navigator (Strong Internal Linking To Products) */}
+      <section className="bg-white py-16 border-b border-slate-100">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="bg-gradient-to-r from-slate-900 via-dark-navy to-slate-900 rounded-[36px] p-8 md:p-12 text-white shadow-xl relative overflow-hidden">
+            <div className="absolute right-0 top-0 w-80 h-80 bg-aqua-500/10 rounded-full blur-[80px] pointer-events-none" />
+            <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between gap-8">
+              <div className="space-y-3 text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-aqua-300 text-xs font-bold uppercase tracking-wider">
+                  <Layers size={14} /> Commercial Seed Comparison
+                </div>
+                <h3 className="text-2xl sm:text-3xl font-bold">Choosing Between Nauplii and Post-Larvae (PL)?</h3>
+                <p className="text-slate-300 text-sm max-w-2xl font-light">
+                  Compare hatchery requirements, salinity conditioning, and delivery protocols in our complete commercial seeds catalog.
+                </p>
+              </div>
+              <div className="flex flex-col sm:flex-row items-center gap-4 shrink-0">
+                <Link
+                  href="/products"
+                  className="bg-aqua-500 hover:bg-aqua-400 text-slate-950 font-bold px-8 py-4 rounded-2xl text-sm transition-all shadow-lg flex items-center gap-2 hover:-translate-y-0.5"
+                >
+                  Explore /products Catalog <ArrowRight size={16} />
+                </Link>
+                <Link
+                  href="/products#reserve"
+                  className="bg-white/10 hover:bg-white/20 text-white font-bold px-6 py-4 rounded-2xl text-sm border border-white/20 transition-all"
+                >
+                  Reserve Next Batch
+                </Link>
+              </div>
             </div>
           </div>
         </div>
@@ -318,16 +392,26 @@ export default function Home() {
             </div>
             <Link
               href="/products"
-              className="group flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-aqua-600 transition-all duration-500 ease-in-out shadow-md"
+              className="group flex items-center gap-3 bg-slate-900 text-white px-8 py-4 rounded-full font-bold hover:bg-aqua-600 transition-all duration-300 ease-in-out shadow-md"
             >
-              View Full Availability <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform duration-500 ease-in-out" />
+              View Full Availability <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
             {featuredProducts.map((product, i) => (
               <ProductCard key={i} {...product} />
             ))}
+          </div>
+
+          <div className="text-center pt-8">
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 text-aqua-600 hover:text-aqua-700 font-bold text-base group"
+            >
+              Looking for water quality testing, biofloc, or custom breeding? Explore all 6 services on /products
+              <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+            </Link>
           </div>
         </div>
       </section>
@@ -347,18 +431,18 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Winding Timeline Layout (No Scrolling) */}
+          {/* Winding Timeline Layout */}
           <div className="relative w-full max-w-[1920px] mx-auto mb-20 px-2 sm:px-4 md:px-6 lg:px-12">
             <div className="grid grid-cols-8 gap-0 sm:gap-1 md:gap-2 lg:gap-4 items-center h-[250px] sm:h-[350px] md:h-[450px] lg:h-[600px] xl:h-[800px] [--offset:2rem] sm:[--offset:3rem] md:[--offset:4rem] lg:[--offset:6rem] xl:[--offset:8rem]">
               {[
-                { title: "Broodstock", img: "/assets/changes/stages/broodstock.jpeg", stage: "01" },
-                { title: "Mating", img: "/assets/changes/stages/egg_female.jpeg", stage: "02" },
-                { title: "Spawning", img: "/assets/changes/stages/spawming.jpeg", stage: "03" },
-                { title: "Eggs", img: "/assets/changes/stages/eggs.jpeg", stage: "04" },
-                { title: "Naupillia", img: "/assets/changes/stages/nuapillia.jpeg", stage: "05" },
-                { title: "Zoea", img: "/assets/changes/stages/zoea.jpeg", stage: "06" },
-                { title: "Mysis", img: "/assets/changes/stages/mysis.jpeg", stage: "07" },
-                { title: "Post Larvae", img: "/assets/changes/stages/Post leave.jpeg", stage: "08" }
+                { title: "Broodstock", img: "/assets/changes/stages/broodstock.jpeg", stage: "01", link: "/products" },
+                { title: "Mating", img: "/assets/changes/stages/egg_female.jpeg", stage: "02", link: "/farming-practices" },
+                { title: "Spawning", img: "/assets/changes/stages/spawming.jpeg", stage: "03", link: "/farming-practices" },
+                { title: "Eggs", img: "/assets/changes/stages/eggs.jpeg", stage: "04", link: "/farming-practices" },
+                { title: "Naupillia", img: "/assets/changes/stages/nuapillia.jpeg", stage: "05", link: "/products", badge: "Order Seed" },
+                { title: "Zoea", img: "/assets/changes/stages/zoea.jpeg", stage: "06", link: "/farming-practices" },
+                { title: "Mysis", img: "/assets/changes/stages/mysis.jpeg", stage: "07", link: "/farming-practices" },
+                { title: "Post Larvae", img: "/assets/changes/stages/Post leave.jpeg", stage: "08", link: "/products", badge: "Stocking" }
               ].map((item, i) => (
                 <div key={i} className="relative w-full flex justify-center items-center">
 
@@ -388,15 +472,21 @@ export default function Home() {
                   )}
 
                   {/* The Card */}
-                  <div
-                    className="relative z-10 w-[110%] sm:w-[130%] md:w-[140%] lg:w-[150%] xl:w-[160%] flex flex-col items-center cursor-pointer"
+                  <Link
+                    href={item.link}
+                    className="relative z-10 w-[110%] sm:w-[130%] md:w-[140%] lg:w-[150%] xl:w-[160%] flex flex-col items-center cursor-pointer group"
                     style={{
                       transform: `translateY(calc(var(--offset) * ${i % 2 === 0 ? '-1' : '1'}))`
                     }}
                   >
                     {/* Image Circle / Rounded Rect */}
-                    <div className="w-full aspect-square rounded-[25%] md:rounded-3xl overflow-hidden border-2 md:border-[3px] lg:border-4 border-white shadow-md lg:shadow-xl bg-slate-900 relative">
-                      <img src={item.img} alt={item.title} className="w-full h-full object-cover" />
+                    <div className="w-full aspect-square rounded-[25%] md:rounded-3xl overflow-hidden border-2 md:border-[3px] lg:border-4 border-white shadow-md lg:shadow-xl bg-slate-900 relative transition-transform duration-300 group-hover:scale-105">
+                      <img
+                        src={item.img}
+                        alt={`${item.title} - Stage ${item.stage} of Litopenaeus Vannamei Lifecycle`}
+                        loading="lazy"
+                        className="w-full h-full object-cover"
+                      />
 
                       {/* Text Over Image */}
                       <div className="absolute inset-0 flex flex-col items-center justify-center md:justify-end pb-0 md:pb-2 lg:pb-3 bg-slate-900/30 md:bg-gradient-to-t md:from-slate-900/80 md:via-slate-900/10 md:to-transparent">
@@ -413,27 +503,37 @@ export default function Home() {
                     <span className="md:hidden text-[7px] sm:text-[9px] font-bold text-slate-800 mt-1 sm:mt-1.5 text-center leading-tight px-0.5 w-[150%] max-w-[60px]">
                       {item.title}
                     </span>
-
-                  </div>
+                  </Link>
 
                 </div>
               ))}
             </div>
           </div>
 
-          <div className="text-center">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
             <Link
               href="/gallery"
-              className="inline-flex items-center gap-3 bg-slate-900 text-white hover:bg-aqua-600 px-10 py-4.5 rounded-full font-bold transition-all duration-500 shadow-lg hover:-translate-y-0.5"
+              className="inline-flex items-center gap-3 bg-slate-900 text-white hover:bg-aqua-600 px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5"
             >
               Explore Full Media Gallery (28+ Photos & Videos) <ArrowRight size={18} />
+            </Link>
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-3 bg-aqua-600 text-white hover:bg-aqua-700 px-8 py-4 rounded-full font-bold transition-all shadow-lg hover:-translate-y-0.5"
+            >
+              Order Seeds from Hatchery <ArrowRight size={18} />
             </Link>
           </div>
         </div>
       </section>
 
+      {/* Retention Mechanic Section (Email Capture & Stock Alerts) */}
+      <section className="container mx-auto px-4 md:px-6 py-12">
+        <RetentionEmailCapture source="homepage_main_section" />
+      </section>
+
       {/* FAQ & Final CTA (White Flow) */}
-      <section className="bg-white pt-32 pb-40 border-t border-slate-100 relative overflow-hidden">
+      <section className="bg-white pt-20 pb-40 border-t border-slate-100 relative overflow-hidden">
         <div className="container mx-auto px-4 md:px-6 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
@@ -465,7 +565,7 @@ export default function Home() {
                       </span>
                     )
                   },
-                  { q: "How do I place a bulk order for PL?", a: "Farmers can use the inquiry form on our website or contact us directly via WhatsApp (0706665295) to reserve batches." }
+                  { q: "How do I place a bulk order for PL?", a: "Farmers can reserve batches directly on our /products page, submit an inquiry form, or contact us via WhatsApp (0706665295)." }
                 ].map((faq, i) => (
                   <div key={i} className="bg-slate-50 p-8 rounded-[30px] border border-slate-100 shadow-sm hover:shadow-md transition-shadow">
                     <h3 className="text-lg font-bold text-slate-900 mb-3 flex items-start gap-4">
@@ -485,35 +585,33 @@ export default function Home() {
               <div className="absolute -inset-4 bg-gradient-to-tr from-aqua-100 to-blue-100 rounded-[50px] blur-xl opacity-60 animate-pulse-slow" />
               <div className="bg-white p-12 md:p-16 rounded-[40px] shadow-2xl border border-slate-100 text-center relative overflow-hidden z-10">
                 <div className="w-20 h-20 bg-gradient-to-br from-aqua-400 to-blue-500 rounded-full flex items-center justify-center text-white mx-auto mb-8 shadow-[0_0_30px_rgba(14,116,144,0.3)]">
-                  <Send size={32} className="ml-1" />
+                  <Globe2 size={32} />
                 </div>
                 <h2 className="text-4xl font-bold text-slate-900 mb-6">Stock Your Farm</h2>
                 <p className="text-slate-500 mb-10 text-lg leading-relaxed font-light">
                   Ready to achieve higher survival rates? Reserve your next batch of USA-lineage Vannamei PL today.
                 </p>
                 <div className="flex flex-col gap-4">
+                  <Link
+                    href="/products"
+                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-aqua-500 to-blue-500 text-white px-8 py-5 rounded-2xl font-bold hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1"
+                  >
+                    View All Products & Services <ArrowRight size={20} />
+                  </Link>
                   <a
                     href="https://wa.me/94706665295"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-aqua-500 to-blue-500 text-white px-8 py-5 rounded-2xl font-bold hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1"
+                    className="flex items-center justify-center gap-3 bg-slate-900 text-white px-8 py-5 rounded-2xl font-bold hover:shadow-lg transition-all duration-300 ease-in-out hover:-translate-y-1"
                   >
                     WhatsApp Inquiry <ArrowRight size={20} />
                   </a>
                   <Link
                     href="/contact"
-                    className="flex items-center justify-center gap-3 bg-transparent text-slate-700 border-2 border-slate-200 px-8 py-5 rounded-2xl font-bold hover:bg-slate-50 hover:border-slate-300 transition-all duration-500 ease-in-out hover:-translate-y-1"
+                    className="flex items-center justify-center gap-3 bg-transparent text-slate-700 border-2 border-slate-200 px-8 py-5 rounded-2xl font-bold hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 ease-in-out hover:-translate-y-1"
                   >
                     Contact Office
                   </Link>
-                  <a
-                    href="https://chat.whatsapp.com/CsRdedlj0xgC1hbjHDlnUi"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-3 bg-gradient-to-r from-emerald-500 to-green-600 text-white px-8 py-5 rounded-2xl font-bold hover:shadow-lg transition-all duration-500 ease-in-out hover:-translate-y-1 mt-2"
-                  >
-                    Join WhatsApp Community
-                  </a>
                 </div>
               </div>
             </div>
@@ -522,53 +620,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* LocalBusiness Schema Injection */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "SUDU DUWA AQUA PRODUCTS (PVT) LTD",
-            "description": "Premier Pacific White Shrimp (Litopenaeus Vannamei) Hatchery and Nauplii Center in Chilaw, Sri Lanka.",
-            "image": "https://sududuwa.com/logo.jpeg",
-            "telephone": "+94 32 2055422",
-            "email": "suduaqua726@gmail.com",
-            "founder": {
-              "@type": "Person",
-              "name": "Selvarajah Pradeeban"
-            },
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "136/52/B/1 Sangathddana Puttalam Road",
-              "addressLocality": "Chilaw",
-              "addressCountry": "LK"
-            },
-            "department": [
-              {
-                "@type": "LocalBusiness",
-                "name": "SUDU DUWA AQUA PRODUCTS NAWPILIYA CENTER",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "No 08, Ambakandawilla",
-                  "addressLocality": "Chilaw",
-                  "addressCountry": "LK"
-                }
-              },
-              {
-                "@type": "LocalBusiness",
-                "name": "ST ROGUS PRAWN HATCHERY",
-                "address": {
-                  "@type": "PostalAddress",
-                  "streetAddress": "Ambakandawilla",
-                  "addressLocality": "Chilaw",
-                  "addressCountry": "LK"
-                }
-              }
-            ]
-          })
-        }}
-      />
+      {/* FAQ & Final CTA */}
     </div>
   );
 }

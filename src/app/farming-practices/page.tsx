@@ -1,5 +1,36 @@
+import type { Metadata } from "next";
 import Hero from "@/components/Hero";
 import { CheckCircle2, ShieldCheck, Droplets, FlaskConical, Microscope, Anchor, CalendarDays, Scale } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Hatchery Technology & Biosecurity | Ambakandawilla, Chilaw",
+  description:
+    "Explore our 4-stage scientific Litopenaeus Vannamei seed production process: USA SIS broodstock selection, water management, scientific nutrition, and PCR biosecurity screening.",
+  alternates: {
+    canonical: "/farming-practices",
+  },
+  openGraph: {
+    title: "Hatchery Technology & Biosecurity | SUDU DUWA AQUA PRODUCTS",
+    description:
+      "Scientific prawn hatchery technology, biosecurity screening, and growth monitoring in Ambakandawilla, Chilaw.",
+    url: "https://sududuwa.com/farming-practices",
+    images: [
+      {
+        url: "/logo.jpeg",
+        width: 640,
+        height: 640,
+        alt: "SUDU DUWA Hatchery Technology and Biosecurity",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hatchery Technology & Biosecurity | SUDU DUWA AQUA PRODUCTS",
+    description:
+      "Scientific prawn hatchery technology, biosecurity screening, and growth monitoring in Ambakandawilla, Chilaw.",
+    images: ["/logo.jpeg"],
+  },
+};
 
 const growthStages = [
   { day: "30", weight: "5.5g", image: "/assets/changes/growth/30day-5.5g.jpeg" },

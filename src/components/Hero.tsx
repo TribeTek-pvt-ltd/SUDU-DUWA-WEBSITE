@@ -25,7 +25,7 @@ export default function Hero({ title, subtitle, ctaText, ctaLink, image }: HeroP
              <div className="absolute inset-0 bg-gradient-to-t from-dark-navy via-transparent to-transparent z-10" />
              <img 
                src={image} 
-               alt="Hero background" 
+               alt={`${title} - Sudu Duwa Aqua Products Hatchery`} 
                className="w-full h-full object-cover"
              />
           </div>
